@@ -14,10 +14,13 @@
 		EA9049BF24E136A9009437B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9049BE24E136A9009437B8 /* Assets.xcassets */; };
 		EA9049C224E136A9009437B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9049C024E136A9009437B8 /* LaunchScreen.storyboard */; };
 		EA9049CC24E136F3009437B8 /* Joints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049CB24E136F3009437B8 /* Joints.swift */; };
-		EA9049CF24E1382E009437B8 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA9049CE24E1382E009437B8 /* PoseNetMobileNet075S16FP16.mlmodel */; };
 		EA9049D124E13977009437B8 /* PoseNetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049D024E13977009437B8 /* PoseNetModel.swift */; };
 		EA9049D324E28A54009437B8 /* PoseNetInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049D224E28A54009437B8 /* PoseNetInput.swift */; };
 		EA9049D524E28A63009437B8 /* PoseNetOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049D424E28A63009437B8 /* PoseNetOutput.swift */; };
+		EA9049D924E291D6009437B8 /* MLFeatureProviderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049D824E291D6009437B8 /* MLFeatureProviderExtensions.swift */; };
+		EA9049DB24E2925B009437B8 /* MLMultiArrayExtenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049DA24E2925B009437B8 /* MLMultiArrayExtenstions.swift */; };
+		EA9049DD24E2972D009437B8 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA9049DC24E2972D009437B8 /* PoseNetMobileNet075S16FP16.mlmodel */; };
+		EA9049DF24E29782009437B8 /* PoseNetOutputExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049DE24E29782009437B8 /* PoseNetOutputExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,11 +33,14 @@
 		EA9049C124E136A9009437B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA9049C324E136A9009437B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9049CB24E136F3009437B8 /* Joints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joints.swift; sourceTree = "<group>"; };
-		EA9049CE24E1382E009437B8 /* PoseNetMobileNet075S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = PoseNetMobileNet075S16FP16.mlmodel; path = ../../../../Downloads/DetectingHumanBodyPosesInAnImage/PoseFinder/Model/PoseNetMobileNet075S16FP16.mlmodel; sourceTree = "<group>"; };
 		EA9049D024E13977009437B8 /* PoseNetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNetModel.swift; sourceTree = "<group>"; };
 		EA9049D224E28A54009437B8 /* PoseNetInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNetInput.swift; sourceTree = "<group>"; };
 		EA9049D424E28A63009437B8 /* PoseNetOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNetOutput.swift; sourceTree = "<group>"; };
 		EA9049D624E28BEA009437B8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EA9049D824E291D6009437B8 /* MLFeatureProviderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLFeatureProviderExtensions.swift; sourceTree = "<group>"; };
+		EA9049DA24E2925B009437B8 /* MLMultiArrayExtenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLMultiArrayExtenstions.swift; sourceTree = "<group>"; };
+		EA9049DC24E2972D009437B8 /* PoseNetMobileNet075S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNetMobileNet075S16FP16.mlmodel; sourceTree = "<group>"; };
+		EA9049DE24E29782009437B8 /* PoseNetOutputExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNetOutputExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +106,23 @@
 		EA9049CD24E13815009437B8 /* CoreMLModel */ = {
 			isa = PBXGroup;
 			children = (
-				EA9049CE24E1382E009437B8 /* PoseNetMobileNet075S16FP16.mlmodel */,
+				EA9049D724E291B5009437B8 /* CoreMLExtensions */,
 				EA9049D024E13977009437B8 /* PoseNetModel.swift */,
+				EA9049DC24E2972D009437B8 /* PoseNetMobileNet075S16FP16.mlmodel */,
 				EA9049D224E28A54009437B8 /* PoseNetInput.swift */,
 				EA9049D424E28A63009437B8 /* PoseNetOutput.swift */,
 			);
 			path = CoreMLModel;
+			sourceTree = "<group>";
+		};
+		EA9049D724E291B5009437B8 /* CoreMLExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA9049D824E291D6009437B8 /* MLFeatureProviderExtensions.swift */,
+				EA9049DA24E2925B009437B8 /* MLMultiArrayExtenstions.swift */,
+				EA9049DE24E29782009437B8 /* PoseNetOutputExtensions.swift */,
+			);
+			path = CoreMLExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,13 +196,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9049D924E291D6009437B8 /* MLFeatureProviderExtensions.swift in Sources */,
 				EA9049D124E13977009437B8 /* PoseNetModel.swift in Sources */,
 				EA9049BA24E136A7009437B8 /* ViewController.swift in Sources */,
 				EA9049D324E28A54009437B8 /* PoseNetInput.swift in Sources */,
 				EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */,
 				EA9049CC24E136F3009437B8 /* Joints.swift in Sources */,
 				EA9049D524E28A63009437B8 /* PoseNetOutput.swift in Sources */,
-				EA9049CF24E1382E009437B8 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
+				EA9049DB24E2925B009437B8 /* MLMultiArrayExtenstions.swift in Sources */,
+				EA9049DD24E2972D009437B8 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
+				EA9049DF24E29782009437B8 /* PoseNetOutputExtensions.swift in Sources */,
 				EA9049B824E136A7009437B8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

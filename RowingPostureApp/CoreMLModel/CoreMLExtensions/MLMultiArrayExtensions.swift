@@ -1,8 +1,8 @@
 //
-//  MLMultiArrayExtenstions.swift
+//  MLMultiArrayExtensions.swift
 //  RowingPostureApp
 //
-//  Created by Kynan Song on 11/08/2020.
+//  Created by Kynan Song on 21/08/2020.
 //  Copyright © 2020 xDesign. All rights reserved.
 //
 

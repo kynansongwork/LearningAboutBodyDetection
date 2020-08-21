@@ -51,7 +51,7 @@ class Joint {
     var isValid: Bool
     
     init(name: JointName,
-         cell: PoseNetOutput.cell = .zero,
+         cell: PoseNetOutput.Cell = .zero,
          jointPosition: CGPoint = .zero,
          confidence: Double = 0,
          isValid: Bool = false) {

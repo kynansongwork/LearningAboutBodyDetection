@@ -14,7 +14,6 @@ enum CoordinatorError: Error {
 }
 
 enum StoryBoardRef: String {
-    case main
     case MainView
     case RecordView
     case AnalysisView

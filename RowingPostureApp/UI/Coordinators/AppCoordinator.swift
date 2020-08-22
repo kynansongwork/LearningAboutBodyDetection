@@ -19,7 +19,7 @@ class AppCoordinator: BaseCoordinator {
     var rootViewController: UIViewController
     var navController: UINavigationController
     
-    var overlayWindow: UIWindow
+    var overlayWindow: UIWindow?
     
     required init() {
         let viewController = UIViewController()
@@ -46,13 +46,12 @@ class AppCoordinator: BaseCoordinator {
     }
     
     func dismiss(_ completion: (() -> Void)?) {
-        //
+        dismissInternal(completion)
     }
     
     func dismiss() {
-        //
+        dismissInternal()
     }
-    
 }
 
 extension AppCoordinator {

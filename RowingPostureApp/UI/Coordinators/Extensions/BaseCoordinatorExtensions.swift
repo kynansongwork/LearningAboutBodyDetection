@@ -78,7 +78,6 @@ extension BaseCoordinator {
         //repeat is similar to a while loop, however conditon cehck occurs at the end, so the code in the loop will be run at least once.
         repeat {
             stack.append(CoordinatorStack(coordinator: coordinator!, viewControllers: coordinator!.getViewControllers()))
-            print(coordinator?.childCoordinator)
             coordinator = coordinator?.childCoordinator
         } while (coordinator != nil)
         return stack

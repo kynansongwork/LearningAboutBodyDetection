@@ -47,16 +47,14 @@ class MainOptionsCoordinator: BaseCoordinator {
     }
     
     func dismiss(_ completion: (() -> Void)?) {
-        delegate?.mainOptionsCoordinatorWillDismiss()
         dismissInternal(completion)
     }
     
     func dismiss() {
-        delegate?.mainOptionsCoordinatorWillDismiss()
         dismissInternal()
     }
 }
 
 extension MainOptionsCoordinator {
-    
+    // TODO: Functions to transition to the other views.
 }

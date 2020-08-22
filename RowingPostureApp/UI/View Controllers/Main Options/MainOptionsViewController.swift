@@ -12,4 +12,11 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
     var viewModel: ViewModel!
     
     
+    @IBOutlet weak var analyseButton: RoundButton!
+    @IBOutlet weak var recordButton: RoundButton!
+    @IBOutlet weak var settingsButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

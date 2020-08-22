@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243B4BFA24F1318900D3601E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B4BF924F1318900D3601E /* RoundButton.swift */; };
 		24B834DC24F123B600D8F3A2 /* MainOptionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DB24F123B600D8F3A2 /* MainOptionsCoordinator.swift */; };
 		24B834DF24F1245900D8F3A2 /* MainOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */; };
 		EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049B524E136A7009437B8 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243B4BF924F1318900D3601E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		24B834DB24F123B600D8F3A2 /* MainOptionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsCoordinator.swift; sourceTree = "<group>"; };
 		24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewController.swift; sourceTree = "<group>"; };
 		EA9049B224E136A7009437B8 /* RowingPostureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RowingPostureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243B4BF824F1316C00D3601E /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				243B4BF924F1318900D3601E /* RoundButton.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
 		24B834DA24F1239100D8F3A2 /* Main Options Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		EA9049E224EBC7BA009437B8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				243B4BF824F1316C00D3601E /* UI Components */,
 				EA9049E324EBC812009437B8 /* ModeledViewController.swift */,
 				EA9049E524EBC84F009437B8 /* ViewModel.swift */,
 				EA9049EC24EBD08D009437B8 /* CustomNavController.swift */,
@@ -288,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243B4BFA24F1318900D3601E /* RoundButton.swift in Sources */,
 				EA9049EB24EBCB97009437B8 /* BaseCoordinatorExtensions.swift in Sources */,
 				EA9049D924E291D6009437B8 /* MLFeatureProviderExtensions.swift in Sources */,
 				EA9049F124EFB32D009437B8 /* StoryboardLoadedViewController.swift in Sources */,
@@ -457,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZSM2D4RUSA;
 				INFOPLIST_FILE = RowingPostureApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZSM2D4RUSA;
 				INFOPLIST_FILE = RowingPostureApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

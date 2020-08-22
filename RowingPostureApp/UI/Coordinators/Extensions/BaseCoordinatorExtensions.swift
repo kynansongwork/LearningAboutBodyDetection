@@ -52,6 +52,10 @@ extension BaseCoordinator {
         }
     }
     
+    func reset() {
+        reset(true)
+    }
+    
     func reset(_ animated: Bool = true) {
         if let navController = rootViewController as? UINavigationController {
             navController.popToRootViewController(animated: animated)

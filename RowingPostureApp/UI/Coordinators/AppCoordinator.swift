@@ -21,8 +21,6 @@ class AppCoordinator: BaseCoordinator {
     
     var overlayWindow: UIWindow
     
-    //var mainOptionsCoordinator: MainOptionsCoordinator?
-    
     required init() {
         let viewController = UIViewController()
         viewController.view.backgroundColor = .white
@@ -31,11 +29,11 @@ class AppCoordinator: BaseCoordinator {
         self.rootViewController = navController
     }
     
-    func reset() {
-        //
+    func prepare() {
+        self.transition(to: AppTransitions.MainOptions)
     }
     
-    @discardableResult func transition(to page: TransitionRef, object: Any?) -> Bool {
+    @discardableResult func transition(to page: TransitionRef, object: Any? = nil) -> Bool {
         guard let page = page as? AppTransitions else {
             return false
         }
@@ -54,11 +52,14 @@ class AppCoordinator: BaseCoordinator {
     func dismiss() {
         //
     }
+    
 }
 
 extension AppCoordinator {
     
     func presentMainOptions() {
         print("Main options page")
+        let mainOptionsCoordinator = MainOptionsCoordinator()
+        try? present(mainOptionsCoordinator, animated: false)
     }
 }

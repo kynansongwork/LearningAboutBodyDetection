@@ -41,5 +41,6 @@ protocol BaseCoordinator: class {
     func dismiss(_ completion: (() -> Void)?)
     func dismiss()
     func reset()
-    func getStack() -> (CoordinatorStack)
+    // For testing
+    //func getStack() -> (CoordinatorStack)
 }

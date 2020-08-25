@@ -14,10 +14,7 @@ enum CoordinatorError: Error {
 }
 
 enum StoryBoardRef: String {
-    case MainView
-    case RecordView
-    case AnalysisView
-    case SettingsView
+    case Main
 }
 
 protocol TransitionRef {}

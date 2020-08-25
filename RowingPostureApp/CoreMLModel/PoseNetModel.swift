@@ -36,14 +36,14 @@ class PoseNetModel {
             //The image is wrapped in an instance of the PoseNet input to be resized and sent
             //to the model.
             
-            let input = PoseNetInput(image: image, size: self.modelInputSize)
+            let input = PoseNetInput(image: image, size: self.inputSize)
             
             guard let prediction = try? self.poseNetMLModel.prediction(from: input) else {
                 return
             }
             
             let poseNetOutput = PoseNetOutput(prediction: prediction,
-                                              modelInputSize: self.modelInputSize,
+                                              modelInputSize: self.inputSize,
                                               modelOutputStride: self.outputStride)
             
             DispatchQueue.main.async {

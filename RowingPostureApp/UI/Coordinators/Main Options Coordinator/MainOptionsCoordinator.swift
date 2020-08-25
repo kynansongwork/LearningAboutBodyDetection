@@ -23,7 +23,7 @@ class MainOptionsCoordinator: BaseCoordinator {
     let mainOptionsController: MainOptionsViewController
     
     required init() {
-        mainOptionsController = MainOptionsViewController.instatiateFromStoryboard(storyboard: .MainView, with: BaseViewModel(coordinator: self))
+        mainOptionsController = MainOptionsViewController.instatiateFromStoryboard(storyboard: .Main, with: BaseViewModel())
         self.rootViewController = CustomNavController(rootViewController: mainOptionsController)
         prepare()
     }
@@ -42,8 +42,8 @@ class MainOptionsCoordinator: BaseCoordinator {
             case .SettingsView:
                 break
             }
-            return true
         }
+        return true
     }
     
     func dismiss(_ completion: (() -> Void)?) {

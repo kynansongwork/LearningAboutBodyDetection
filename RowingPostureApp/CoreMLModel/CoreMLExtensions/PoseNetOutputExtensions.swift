@@ -86,7 +86,7 @@ extension PoseNetOutput {
     
     func backwardDisplacement(for edgeIndex: Int, at cell: Cell) -> CGVector {
         let yEdgeIndex = [edgeIndex, cell.yIndex, cell.xIndex]
-        let xEdgeIndex = [edgeIndex, + Pose.edges.count, cell.yIndex, cell.xIndex]
+        let xEdgeIndex = [edgeIndex + Pose.edges.count, cell.yIndex, cell.xIndex]
         
         let displacementY = backwardDisplacementMap[yEdgeIndex].doubleValue
         let displacementX = backwardDisplacementMap[xEdgeIndex].doubleValue

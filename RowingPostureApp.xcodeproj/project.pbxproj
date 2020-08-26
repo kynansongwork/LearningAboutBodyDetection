@@ -10,6 +10,9 @@
 		243B4BFA24F1318900D3601E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B4BF924F1318900D3601E /* RoundButton.swift */; };
 		24656D8724F577A900F9D288 /* PoseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D8624F577A900F9D288 /* PoseBuilder.swift */; };
 		24656D8A24F57A8000F9D288 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D8924F57A8000F9D288 /* AppUtility.swift */; };
+		24656D8C24F66CC400F9D288 /* PoseBuilderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D8B24F66CC400F9D288 /* PoseBuilderConfiguration.swift */; };
+		24656D8F24F675B100F9D288 /* PoseBuilderExtensionSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D8E24F675B100F9D288 /* PoseBuilderExtensionSingle.swift */; };
+		24656D9124F6BAFA00F9D288 /* PoseBuilderExtensionsMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9024F6BAFA00F9D288 /* PoseBuilderExtensionsMultiple.swift */; };
 		24B834DC24F123B600D8F3A2 /* MainOptionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DB24F123B600D8F3A2 /* MainOptionsCoordinator.swift */; };
 		24B834DF24F1245900D8F3A2 /* MainOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */; };
 		EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049B524E136A7009437B8 /* AppDelegate.swift */; };
@@ -42,6 +45,9 @@
 		243B4BF924F1318900D3601E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		24656D8624F577A900F9D288 /* PoseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseBuilder.swift; sourceTree = "<group>"; };
 		24656D8924F57A8000F9D288 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		24656D8B24F66CC400F9D288 /* PoseBuilderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseBuilderConfiguration.swift; sourceTree = "<group>"; };
+		24656D8E24F675B100F9D288 /* PoseBuilderExtensionSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseBuilderExtensionSingle.swift; sourceTree = "<group>"; };
+		24656D9024F6BAFA00F9D288 /* PoseBuilderExtensionsMultiple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseBuilderExtensionsMultiple.swift; sourceTree = "<group>"; };
 		24B834DB24F123B600D8F3A2 /* MainOptionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsCoordinator.swift; sourceTree = "<group>"; };
 		24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewController.swift; sourceTree = "<group>"; };
 		EA9049B224E136A7009437B8 /* RowingPostureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RowingPostureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +104,15 @@
 				24656D8924F57A8000F9D288 /* AppUtility.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		24656D8D24F6758B00F9D288 /* PoseBuilderExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				24656D8E24F675B100F9D288 /* PoseBuilderExtensionSingle.swift */,
+				24656D9024F6BAFA00F9D288 /* PoseBuilderExtensionsMultiple.swift */,
+			);
+			path = PoseBuilderExtensions;
 			sourceTree = "<group>";
 		};
 		24B834DA24F1239100D8F3A2 /* Main Options Coordinator */ = {
@@ -162,9 +177,11 @@
 		EA9049CA24E136DF009437B8 /* Body Position */ = {
 			isa = PBXGroup;
 			children = (
+				24656D8D24F6758B00F9D288 /* PoseBuilderExtensions */,
 				EA9049CB24E136F3009437B8 /* Joints.swift */,
 				EA9049FB24EFCA51009437B8 /* Pose.swift */,
 				24656D8624F577A900F9D288 /* PoseBuilder.swift */,
+				24656D8B24F66CC400F9D288 /* PoseBuilderConfiguration.swift */,
 			);
 			path = "Body Position";
 			sourceTree = "<group>";
@@ -319,8 +336,10 @@
 				EA9049D924E291D6009437B8 /* MLFeatureProviderExtensions.swift in Sources */,
 				EA9049F124EFB32D009437B8 /* StoryboardLoadedViewController.swift in Sources */,
 				EA9049F824EFC065009437B8 /* MLMultiArrayExtensions.swift in Sources */,
+				24656D9124F6BAFA00F9D288 /* PoseBuilderExtensionsMultiple.swift in Sources */,
 				EA9049F624EFC047009437B8 /* CGImageExtensions.swift in Sources */,
 				EA9049EF24EBDAF2009437B8 /* AppCoordinator.swift in Sources */,
+				24656D8F24F675B100F9D288 /* PoseBuilderExtensionSingle.swift in Sources */,
 				24B834DC24F123B600D8F3A2 /* MainOptionsCoordinator.swift in Sources */,
 				EA9049D124E13977009437B8 /* PoseNetModel.swift in Sources */,
 				EA9049BA24E136A7009437B8 /* ViewController.swift in Sources */,
@@ -337,6 +356,7 @@
 				EA9049DD24E2972D009437B8 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
 				24656D8A24F57A8000F9D288 /* AppUtility.swift in Sources */,
 				EA9049E824EBC972009437B8 /* BaseCoordinator.swift in Sources */,
+				24656D8C24F66CC400F9D288 /* PoseBuilderConfiguration.swift in Sources */,
 				EA9049DF24E29782009437B8 /* PoseNetOutputExtensions.swift in Sources */,
 				EA9049B824E136A7009437B8 /* SceneDelegate.swift in Sources */,
 			);

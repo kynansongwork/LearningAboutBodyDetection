@@ -108,19 +108,41 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHH-de-ceQ" userLabel="Overlay View">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43l-jY-jsU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43l-jY-jsU" customClass="RoundButton" customModule="RowingPostureApp" customModuleProvider="target">
                                         <rect key="frame" x="787" y="192" width="49" height="30"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Record">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="80"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeU-Df-2gv">
+                                        <rect key="frame" x="801" y="316" width="35" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-zJ-aJL">
+                                        <rect key="frame" x="822.5" y="345" width="13.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="QeU-Df-2gv" secondAttribute="trailing" constant="60" id="3Lb-yD-17v"/>
                                     <constraint firstItem="43l-jY-jsU" firstAttribute="top" secondItem="SHH-de-ceQ" secondAttribute="top" constant="192" id="Iq5-6l-AYW"/>
+                                    <constraint firstAttribute="trailing" secondItem="HhH-zJ-aJL" secondAttribute="trailing" constant="60" id="J0q-zO-QKc"/>
+                                    <constraint firstAttribute="bottom" secondItem="HhH-zJ-aJL" secondAttribute="bottom" constant="45" id="Se3-U2-4ex"/>
                                     <constraint firstAttribute="bottom" secondItem="43l-jY-jsU" secondAttribute="bottom" constant="192" id="U8x-2i-GoT"/>
                                     <constraint firstItem="43l-jY-jsU" firstAttribute="centerY" secondItem="SHH-de-ceQ" secondAttribute="centerY" id="cka-WT-UtD"/>
                                     <constraint firstAttribute="trailing" secondItem="43l-jY-jsU" secondAttribute="trailing" constant="60" id="gI0-i6-KF2"/>
+                                    <constraint firstItem="HhH-zJ-aJL" firstAttribute="top" secondItem="QeU-Df-2gv" secondAttribute="bottom" constant="8" id="ql0-H3-hvI"/>
                                 </constraints>
                             </view>
                         </subviews>

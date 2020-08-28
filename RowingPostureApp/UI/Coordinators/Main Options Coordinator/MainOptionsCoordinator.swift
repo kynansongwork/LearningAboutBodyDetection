@@ -23,7 +23,7 @@ class MainOptionsCoordinator: BaseCoordinator {
     let mainOptionsController: MainOptionsViewController
     
     required init() {
-        mainOptionsController = MainOptionsViewController.instatiateFromStoryboard(storyboard: .Main, with: BaseViewModel())
+        mainOptionsController = MainOptionsViewController.instatiateFromStoryboard(storyboard: .Main, with: MainOptionsViewModel())
         self.rootViewController = CustomNavController(rootViewController: mainOptionsController)
         prepare()
     }
@@ -38,7 +38,7 @@ class MainOptionsCoordinator: BaseCoordinator {
             case .AnalysisView:
                 break
             case .CaptureView:
-                break
+                showCapturePage()
             case .SettingsView:
                 break
             }
@@ -57,4 +57,9 @@ class MainOptionsCoordinator: BaseCoordinator {
 
 extension MainOptionsCoordinator {
     // TODO: Functions to transition to the other views.
+    
+    func showCapturePage() {
+        let controller = VideoCaptureViewController.instatiateFromStoryboard(storyboard: .Main, with: VideoCaptureViewModel(coordinator: self))
+        self.show(viewController: controller)
+    }
 }

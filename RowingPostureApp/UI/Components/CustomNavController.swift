@@ -10,6 +10,10 @@ import UIKit
 
 class CustomNavController: UINavigationController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     public func pushViewController(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)

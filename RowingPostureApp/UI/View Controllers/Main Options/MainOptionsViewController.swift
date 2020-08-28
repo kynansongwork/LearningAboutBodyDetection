@@ -9,8 +9,8 @@
 import UIKit
 
 class MainOptionsViewController: UIViewController, StoryboardLoadedViewController {
-    var viewModel: ViewModel!
     
+    var viewModel: MainOptionsViewModel!
     
     @IBOutlet weak var analyseButton: RoundButton!
     @IBOutlet weak var recordButton: RoundButton!
@@ -30,5 +30,9 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
         
         // Resets lock - may not neet this based on the plans for the app.
         AppUtility.lockOrientation(.all)
+    }
+    
+    @IBAction func recordButtonPressed(_ sender: Any) {
+        viewModel.coordinator?.transition(to: MainOptionsTransitions.CaptureView, object: nil)
     }
 }

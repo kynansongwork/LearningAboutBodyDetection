@@ -59,6 +59,9 @@
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Am-XR-6vm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -96,7 +99,7 @@
         <!--Camera View Controller-->
         <scene sceneID="kF2-lB-tST">
             <objects>
-                <viewController id="ALd-Hh-zTC" userLabel="Camera View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoCaptureViewController" id="ALd-Hh-zTC" userLabel="Camera View Controller" customClass="VideoCaptureViewController" customModule="RowingPostureApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7w-jk-cYN">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

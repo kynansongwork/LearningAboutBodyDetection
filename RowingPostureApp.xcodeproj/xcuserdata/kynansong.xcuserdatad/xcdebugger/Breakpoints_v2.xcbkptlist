@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "192BDA05-63DA-4C18-8CE0-998CC3192FA6"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82C0427E-7BD1-4CB9-862E-D27A9C35559E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/Coordinators/Main Options Coordinator/MainOptionsCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0F7D937-5EFD-4C98-B268-CE34B3F6EB22"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/Coordinators/Main Options Coordinator/MainOptionsCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "prepare()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16982406-33C9-4320-9280-BE7708532612"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/Coordinators/Main Options Coordinator/MainOptionsCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "showCapturePage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A38599E4-F7C9-4FC4-80E3-B8168E9342B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/View Controllers/Main Options/MainOptionsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "recordButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2623C40-7958-43A7-8FBD-F197EAC23AFB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/View Controllers/Main Options/MainOptionsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "recordButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/View Controllers/Main Options/MainOptionsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "MainOptionsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 4e872c42aefd4a03"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RowingPostureApp.MainOptionsViewController.viewModel.getter : Swift.Optional&lt;RowingPostureApp.MainOptionsViewModel&gt;"
+                  moduleName = "RowingPostureApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Kynan%204th%20Brain/Swift/LearningAboutBodyDetection/RowingPostureApp/UI/View%20Controllers/Main%20Options/MainOptionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 44fe60c526c72ef7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RowingPostureApp.MainOptionsViewController.viewModel.setter : Swift.Optional&lt;RowingPostureApp.MainOptionsViewModel&gt;"
+                  moduleName = "RowingPostureApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Kynan%204th%20Brain/Swift/LearningAboutBodyDetection/RowingPostureApp/UI/View%20Controllers/Main%20Options/MainOptionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - b73d552fcb323300"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RowingPostureApp.MainOptionsViewController.viewModel.modify : Swift.Optional&lt;RowingPostureApp.MainOptionsViewModel&gt;"
+                  moduleName = "RowingPostureApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Kynan%204th%20Brain/Swift/LearningAboutBodyDetection/RowingPostureApp/UI/View%20Controllers/Main%20Options/MainOptionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 4c2638cbd73a0b2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RowingPostureApp.MainOptionsViewController.viewModel.modify : Swift.Optional&lt;RowingPostureApp.MainOptionsViewModel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "RowingPostureApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Kynan%204th%20Brain/Swift/LearningAboutBodyDetection/RowingPostureApp/UI/View%20Controllers/Main%20Options/MainOptionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 29f34a6e623a9cf8"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RowingPostureApp.MainOptionsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RowingPostureApp.MainOptionsViewController"
+                  moduleName = "RowingPostureApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Kynan%204th%20Brain/Swift/LearningAboutBodyDetection/RowingPostureApp/UI/View%20Controllers/Main%20Options/MainOptionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - eb7c0a1bfdeebece"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RowingPostureApp.MainOptionsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RowingPostureApp.MainOptionsViewController&gt;"
+                  moduleName = "RowingPostureApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Kynan%204th%20Brain/Swift/LearningAboutBodyDetection/RowingPostureApp/UI/View%20Controllers/Main%20Options/MainOptionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "117">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "156D420F-9F33-4724-8F77-A0AC5B618A8D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/Components/StoryboardLoadedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "instatiateFromStoryboard(storyboard:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D9B755C-EEBC-4266-9B38-1ED5E02D71B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/Coordinators/Extensions/BaseCoordinatorExtensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "present(_:animated:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = appCoordinator?.rootViewController
         window?.makeKeyAndVisible()
         
-        appCoordinator?.prepare()
+        //appCoordinator?.prepare()
         
         return true
     }

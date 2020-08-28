@@ -18,6 +18,7 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(viewModel)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +34,6 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
     }
     
     @IBAction func recordButtonPressed(_ sender: Any) {
-        viewModel.coordinator?.transition(to: MainOptionsTransitions.CaptureView, object: nil)
+        viewModel.coordinator?.transition(to: AppTransitions.CaptureView, object: nil)
     }
 }

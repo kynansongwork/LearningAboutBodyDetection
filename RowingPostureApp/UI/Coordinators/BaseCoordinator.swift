@@ -39,5 +39,5 @@ protocol BaseCoordinator: class {
     func dismiss()
     func reset()
     // For testing
-    //func getStack() -> (CoordinatorStack)
+    func getStack() -> [CoordinatorStack]
 }

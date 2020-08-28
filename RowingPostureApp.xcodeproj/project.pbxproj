@@ -18,7 +18,6 @@
 		24656D9C24F90AF600F9D288 /* VideoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9B24F90AF500F9D288 /* VideoCaptureViewController.swift */; };
 		24656D9E24F90B0400F9D288 /* VideoCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9D24F90B0400F9D288 /* VideoCaptureViewModel.swift */; };
 		24656DA024F90D8700F9D288 /* MainOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9F24F90D8700F9D288 /* MainOptionsViewModel.swift */; };
-		24B834DC24F123B600D8F3A2 /* MainOptionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DB24F123B600D8F3A2 /* MainOptionsCoordinator.swift */; };
 		24B834DF24F1245900D8F3A2 /* MainOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */; };
 		EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049B524E136A7009437B8 /* AppDelegate.swift */; };
 		EA9049B824E136A7009437B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049B724E136A7009437B8 /* SceneDelegate.swift */; };
@@ -57,7 +56,6 @@
 		24656D9B24F90AF500F9D288 /* VideoCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureViewController.swift; sourceTree = "<group>"; };
 		24656D9D24F90B0400F9D288 /* VideoCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureViewModel.swift; sourceTree = "<group>"; };
 		24656D9F24F90D8700F9D288 /* MainOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewModel.swift; sourceTree = "<group>"; };
-		24B834DB24F123B600D8F3A2 /* MainOptionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsCoordinator.swift; sourceTree = "<group>"; };
 		24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewController.swift; sourceTree = "<group>"; };
 		EA9049B224E136A7009437B8 /* RowingPostureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RowingPostureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9049B524E136A7009437B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,14 +137,6 @@
 				24656D9D24F90B0400F9D288 /* VideoCaptureViewModel.swift */,
 			);
 			path = "Video Capture";
-			sourceTree = "<group>";
-		};
-		24B834DA24F1239100D8F3A2 /* Main Options Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				24B834DB24F123B600D8F3A2 /* MainOptionsCoordinator.swift */,
-			);
-			path = "Main Options Coordinator";
 			sourceTree = "<group>";
 		};
 		24B834DD24F1244A00D8F3A2 /* Main Options */ = {
@@ -250,7 +240,6 @@
 		EA9049E124EBC754009437B8 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				24B834DA24F1239100D8F3A2 /* Main Options Coordinator */,
 				EA9049E924EBCB80009437B8 /* Extensions */,
 				EA9049E724EBC972009437B8 /* BaseCoordinator.swift */,
 				EA9049EE24EBDAF2009437B8 /* AppCoordinator.swift */,
@@ -369,7 +358,6 @@
 				EA9049EF24EBDAF2009437B8 /* AppCoordinator.swift in Sources */,
 				24656D8F24F675B100F9D288 /* PoseBuilderExtensionSingle.swift in Sources */,
 				24656D9C24F90AF600F9D288 /* VideoCaptureViewController.swift in Sources */,
-				24B834DC24F123B600D8F3A2 /* MainOptionsCoordinator.swift in Sources */,
 				EA9049D124E13977009437B8 /* PoseNetModel.swift in Sources */,
 				EA9049E424EBC812009437B8 /* ModeledViewController.swift in Sources */,
 				EA9049D324E28A54009437B8 /* PoseNetInput.swift in Sources */,

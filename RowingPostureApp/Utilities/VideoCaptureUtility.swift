@@ -35,7 +35,7 @@ class VideoCapture: NSObject {
     
     // Processes camera set up and frame capture.
     private let sessionQueue = DispatchQueue (
-        label: "com.xdesign.RowingPostureApp"
+        label: "com.RowingPostureApp"
     )
     
     // To toggle between cameras.

@@ -18,6 +18,7 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //viewModel = MainOptionsViewModel()
         print(viewModel)
     }
     
@@ -32,8 +33,9 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
         // Resets lock - may not neet this based on the plans for the app.
         AppUtility.lockOrientation(.all)
     }
-    
-    @IBAction func recordButtonPressed(_ sender: Any) {
+
+    @IBAction func recordButtonTapped(_ sender: Any) {
+        
         viewModel.coordinator?.transition(to: AppTransitions.CaptureView, object: nil)
     }
 }

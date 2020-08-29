@@ -20,7 +20,6 @@
 		24656DA024F90D8700F9D288 /* MainOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9F24F90D8700F9D288 /* MainOptionsViewModel.swift */; };
 		24B834DF24F1245900D8F3A2 /* MainOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */; };
 		EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049B524E136A7009437B8 /* AppDelegate.swift */; };
-		EA9049B824E136A7009437B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049B724E136A7009437B8 /* SceneDelegate.swift */; };
 		EA9049BD24E136A7009437B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9049BB24E136A7009437B8 /* Main.storyboard */; };
 		EA9049BF24E136A9009437B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9049BE24E136A9009437B8 /* Assets.xcassets */; };
 		EA9049C224E136A9009437B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9049C024E136A9009437B8 /* LaunchScreen.storyboard */; };
@@ -59,7 +58,6 @@
 		24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewController.swift; sourceTree = "<group>"; };
 		EA9049B224E136A7009437B8 /* RowingPostureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RowingPostureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9049B524E136A7009437B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA9049B724E136A7009437B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EA9049BC24E136A7009437B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA9049BE24E136A9009437B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9049C124E136A9009437B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				EA9049CD24E13815009437B8 /* CoreMLModel */,
 				EA9049CA24E136DF009437B8 /* Body Position */,
 				EA9049B524E136A7009437B8 /* AppDelegate.swift */,
-				EA9049B724E136A7009437B8 /* SceneDelegate.swift */,
 				EA9049BB24E136A7009437B8 /* Main.storyboard */,
 				EA9049BE24E136A9009437B8 /* Assets.xcassets */,
 				EA9049C024E136A9009437B8 /* LaunchScreen.storyboard */,
@@ -378,7 +375,6 @@
 				24656D8C24F66CC400F9D288 /* PoseBuilderConfiguration.swift in Sources */,
 				24656D9624F803BC00F9D288 /* BluetoothHelper.swift in Sources */,
 				EA9049DF24E29782009437B8 /* PoseNetOutputExtensions.swift in Sources */,
-				EA9049B824E136A7009437B8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +526,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xdesign.RowingPostureApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RowingPostureApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -549,7 +545,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xdesign.RowingPostureApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RowingPostureApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -106,5 +106,11 @@ class VideoCapture: NSObject {
         captureSession.outputs.forEach { output in
             captureSession.removeOutput(output)
         }
+        
+        // Pixel type is set here.
+        let settings: [String: Any] = [
+            String(kCVPixelBufferPixelFormatTypeKey):
+                kCVPixelFormatType_420YpCbCr8BiPlanarFullRange
+        ]
     }
 }

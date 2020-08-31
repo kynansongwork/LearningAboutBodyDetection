@@ -71,5 +71,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(viewModel.cells[indexPath.row])
+    }
+    
     
 }

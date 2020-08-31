@@ -43,8 +43,8 @@ class SettingsViewController: UIViewController, StoryboardLoadedViewController {
         
         let closeModalButton = UIBarButtonItem()
         closeModalButton.customView = closeButton
-        closeModalButton.customView?.tintColor = .white
-        self.navigationItem.rightBarButtonItem = closeModalButton
+        closeModalButton.customView?.tintColor = .blue
+        self.navigationItem.leftBarButtonItem = closeModalButton
     }
     
     @objc func dismissSettings() {

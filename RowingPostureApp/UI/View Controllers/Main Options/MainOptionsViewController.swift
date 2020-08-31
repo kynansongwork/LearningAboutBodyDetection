@@ -34,7 +34,10 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
     }
 
     @IBAction func recordButtonTapped(_ sender: Any) {
-        
         viewModel.coordinator?.transition(to: AppTransitions.CaptureView, object: nil)
+    }
+    
+    @IBAction func settingsButtonTapped(_ sender: Any) {
+        viewModel.coordinator?.transition(to: AppTransitions.SettingsView, object: nil)
     }
 }

@@ -29,7 +29,7 @@ class VideoCapture: NSObject {
     let captureSession = AVCaptureSession()
     
     // Records video and allows access to the video frames.
-    let videoOutput = AVCaptureSession()
+    let videoOutput = AVCaptureVideoDataOutput()
     
     private(set) var cameraPosition = AVCaptureDevice.Position.back
     
@@ -112,5 +112,67 @@ class VideoCapture: NSObject {
             String(kCVPixelBufferPixelFormatTypeKey):
                 kCVPixelFormatType_420YpCbCr8BiPlanarFullRange
         ]
+        
+        videoOutput.videoSettings = settings
+        
+        // Newer frames will be discarded whilst the dispatch queue is processing older frames.
+        videoOutput.alwaysDiscardsLateVideoFrames = true
+        videoOutput.setSampleBufferDelegate(self, queue: sessionQueue)
+        
+        guard captureSession.canAddOutput(videoOutput) else {
+            throw VideoCaptureError.invalidOutput
+        }
+        
+        captureSession.addOutput(videoOutput)
+        
+        // The video orientation will be updated here.
+        if let connection = videoOutput.connection(with: .video), connection.isVideoOrientationSupported {
+            connection.videoOrientation = AVCaptureVideoOrientation(deviceOrientation: UIDevice.current.orientation)
+            connection.isVideoMirrored = cameraPosition == .front
+            
+            // The landscape orientaton if inverted to force the image into the upward orientation.
+            // Basically spin the orientation based on the phones position.
+            if connection.videoOrientation == .landscapeLeft {
+                connection.videoOrientation = .landscapeRight
+            } else if connection.videoOrientation == .landscapeRight {
+                connection.videoOrientation = .landscapeLeft
+            }
+        }
+    }
+    
+    // Frame capture will begin with these functions.
+    // Notes state that this is to be performed on the main thread for speed purposes.
+    
+    public func startCaptureSession(competion: (() -> Void)? = nil) {
+        sessionQueue.async {
+            if !self.captureSession.isRunning {
+                
+                // This is called to start the data from between the inputs and outputs.
+                self.captureSession.startRunning()
+            }
+            
+            if let completionHandler = competion {
+                DispatchQueue.main.async {
+                    completionHandler()
+                }
+            }
+        }
+    }
+    
+    // Ending capture session.
+    // Also to be performed on the main thread for speed purposes.
+    
+    public func stopCaptureSession(completion: (() -> Void)? = nil) {
+        sessionQueue.async {
+            if self.captureSession.isRunning {
+                self.captureSession.stopRunning()
+            }
+        }
+        
+        if let completionHandler = completion {
+            DispatchQueue.main.async {
+                completionHandler()
+            }
+        }
     }
 }

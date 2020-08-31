@@ -43,7 +43,7 @@ class AppCoordinator: BaseCoordinator {
                case .CaptureView:
                    presetCapturePage()
                case .SettingsView:
-                   break
+                   presetSettingsPage()
                }
            }
            return true
@@ -60,15 +60,16 @@ class AppCoordinator: BaseCoordinator {
 
 extension AppCoordinator {
     
-    func showCapturePage() {
-        let controller = VideoCaptureViewController.instatiateFromStoryboard(storyboard: .Main, with: VideoCaptureViewModel(coordinator: self))
-        self.show(viewController: controller)
-    }
-    
     func presetCapturePage() {
         let controller = VideoCaptureViewController.instatiateFromStoryboard(storyboard: .Main, with: VideoCaptureViewModel(coordinator: self))
         let navController = CustomNavController(rootViewController: controller)
         navController.navigationBar.isHidden = true
+        self.rootViewController.present(navController, animated: true, completion: nil)
+    }
+    
+    func presetSettingsPage() {
+        let controller = SettingsViewController.instatiateFromStoryboard(storyboard: .Main, with: BaseViewModel(coordinator: self))
+        let navController = CustomNavController(rootViewController: controller)
         self.rootViewController.present(navController, animated: true, completion: nil)
     }
 }

@@ -25,7 +25,9 @@ class AppCoordinator: BaseCoordinator {
     required init() {
         mainOptionsViewController = MainOptionsViewController.instatiateFromStoryboard(storyboard: .Main, with: MainOptionsViewModel())
         mainOptionsViewController.view.backgroundColor = .white
-        self.rootViewController = CustomNavController(rootViewController: mainOptionsViewController)
+        let navController = CustomNavController(rootViewController: mainOptionsViewController)
+        navController.navigationBar.isHidden = true
+        self.rootViewController = navController
         prepare()
     }
     
@@ -39,7 +41,7 @@ class AppCoordinator: BaseCoordinator {
                case .AnalysisView:
                    break
                case .CaptureView:
-                   showCapturePage()
+                   presetCapturePage()
                case .SettingsView:
                    break
                }
@@ -61,5 +63,12 @@ extension AppCoordinator {
     func showCapturePage() {
         let controller = VideoCaptureViewController.instatiateFromStoryboard(storyboard: .Main, with: VideoCaptureViewModel(coordinator: self))
         self.show(viewController: controller)
+    }
+    
+    func presetCapturePage() {
+        let controller = VideoCaptureViewController.instatiateFromStoryboard(storyboard: .Main, with: VideoCaptureViewModel(coordinator: self))
+        let navController = CustomNavController(rootViewController: controller)
+        navController.navigationBar.isHidden = true
+        self.rootViewController.present(navController, animated: true, completion: nil)
     }
 }

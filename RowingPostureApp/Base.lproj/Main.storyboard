@@ -135,6 +135,13 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2H-ww-bIN">
+                                        <rect key="frame" x="52" y="23" width="30" height="30"/>
+                                        <state key="normal" image="icClose"/>
+                                        <connections>
+                                            <action selector="closeButtonTapped:" destination="ALd-Hh-zTC" eventType="touchUpInside" id="tDL-fU-3ZI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -144,7 +151,9 @@
                                     <constraint firstAttribute="bottom" secondItem="HhH-zJ-aJL" secondAttribute="bottom" constant="45" id="Se3-U2-4ex"/>
                                     <constraint firstAttribute="bottom" secondItem="43l-jY-jsU" secondAttribute="bottom" constant="192" id="U8x-2i-GoT"/>
                                     <constraint firstItem="43l-jY-jsU" firstAttribute="centerY" secondItem="SHH-de-ceQ" secondAttribute="centerY" id="cka-WT-UtD"/>
+                                    <constraint firstItem="g2H-ww-bIN" firstAttribute="top" secondItem="SHH-de-ceQ" secondAttribute="top" constant="23" id="du1-cR-uCI"/>
                                     <constraint firstAttribute="trailing" secondItem="43l-jY-jsU" secondAttribute="trailing" constant="60" id="gI0-i6-KF2"/>
+                                    <constraint firstItem="g2H-ww-bIN" firstAttribute="leading" secondItem="SHH-de-ceQ" secondAttribute="leading" constant="52" id="mVG-ix-XWg"/>
                                     <constraint firstItem="HhH-zJ-aJL" firstAttribute="top" secondItem="QeU-Df-2gv" secondAttribute="bottom" constant="8" id="ql0-H3-hvI"/>
                                 </constraints>
                             </view>
@@ -162,10 +171,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EBf-77-0ur"/>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="g2H-ww-bIN" id="HiT-Qg-eb0"/>
+                        <outlet property="rateLabel" destination="HhH-zJ-aJL" id="XvR-UI-mCF"/>
+                        <outlet property="recordButton" destination="43l-jY-jsU" id="1DH-32-tGr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgi-Su-u71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="953.57142857142856" y="137.68115942028987"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icClose" width="30" height="30"/>
+    </resources>
 </document>

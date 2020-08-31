@@ -18,7 +18,6 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //viewModel = MainOptionsViewModel()
         print(viewModel)
     }
     

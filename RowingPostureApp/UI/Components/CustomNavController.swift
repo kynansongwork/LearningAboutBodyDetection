@@ -10,8 +10,14 @@ import UIKit
 
 class CustomNavController: UINavigationController {
     
+    var statusBarStyle: UIStatusBarStyle = .default
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return self.statusBarStyle
     }
     
     public func pushViewController(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {

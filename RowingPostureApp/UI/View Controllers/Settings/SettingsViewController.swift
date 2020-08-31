@@ -9,12 +9,22 @@
 import UIKit
 
 class SettingsViewController: UIViewController, StoryboardLoadedViewController {
-    var viewModel: ViewModel!
+    var viewModel: SettingsViewModel!
     
     @IBOutlet weak var tableView: UITableView!
     
+    let cellReuseIdentifier = "cell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        
         setUpNavBar()
     }
     
@@ -44,11 +54,21 @@ class SettingsViewController: UIViewController, StoryboardLoadedViewController {
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let cells = viewModel?.cells {
+            return cells.count
+        }
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
+        
+        if let settingsCell = cell as? UITableViewCell {
+            settingsCell.textLabel?.text = viewModel.cells[indexPath.row]
+            
+            return cell
+        }
     }
     
     

@@ -68,7 +68,7 @@ extension AppCoordinator {
     }
     
     func presetSettingsPage() {
-        let controller = SettingsViewController.instatiateFromStoryboard(storyboard: .Main, with: BaseViewModel(coordinator: self))
+        let controller = SettingsViewController.instatiateFromStoryboard(storyboard: .Main, with: SettingsViewModel(coordinator: self))
         let navController = CustomNavController(rootViewController: controller)
         self.rootViewController.present(navController, animated: true, completion: nil)
     }

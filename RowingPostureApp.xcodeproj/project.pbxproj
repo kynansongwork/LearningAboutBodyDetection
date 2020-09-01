@@ -24,6 +24,7 @@
 		24B834DF24F1245900D8F3A2 /* MainOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */; };
 		24F71C7924FD7440007D3733 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7824FD7440007D3733 /* SettingsViewModel.swift */; };
 		24F71C7B24FD7551007D3733 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7A24FD7551007D3733 /* Settings.swift */; };
+		24F71CCA24FE3596007D3733 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71CC924FE3596007D3733 /* CoordinatorTests.swift */; };
 		EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049B524E136A7009437B8 /* AppDelegate.swift */; };
 		EA9049BD24E136A7009437B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9049BB24E136A7009437B8 /* Main.storyboard */; };
 		EA9049BF24E136A9009437B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9049BE24E136A9009437B8 /* Assets.xcassets */; };
@@ -48,6 +49,16 @@
 		EA9049FC24EFCA51009437B8 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049FB24EFCA51009437B8 /* Pose.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		24F71CC424FE3570007D3733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA9049AA24E136A7009437B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA9049B124E136A7009437B8;
+			remoteInfo = RowingPostureApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		243B4BF924F1318900D3601E /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		24656D8624F577A900F9D288 /* PoseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseBuilder.swift; sourceTree = "<group>"; };
@@ -66,6 +77,9 @@
 		24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewController.swift; sourceTree = "<group>"; };
 		24F71C7824FD7440007D3733 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		24F71C7A24FD7551007D3733 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		24F71CBF24FE3570007D3733 /* RowingPostureAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RowingPostureAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24F71CC324FE3570007D3733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24F71CC924FE3596007D3733 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoordinatorTests.swift; path = CoordinatorTests/CoordinatorTests.swift; sourceTree = "<group>"; };
 		EA9049B224E136A7009437B8 /* RowingPostureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RowingPostureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9049B524E136A7009437B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9049BC24E136A7009437B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +108,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		24F71CBC24FE3570007D3733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA9049AF24E136A7009437B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,11 +196,21 @@
 			path = "Main Options";
 			sourceTree = "<group>";
 		};
+		24F71CC024FE3570007D3733 /* RowingPostureAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				24F71CC924FE3596007D3733 /* CoordinatorTests.swift */,
+				24F71CC324FE3570007D3733 /* Info.plist */,
+			);
+			path = RowingPostureAppTests;
+			sourceTree = "<group>";
+		};
 		EA9049A924E136A7009437B8 = {
 			isa = PBXGroup;
 			children = (
 				EA9049D624E28BEA009437B8 /* README.md */,
 				EA9049B424E136A7009437B8 /* RowingPostureApp */,
+				24F71CC024FE3570007D3733 /* RowingPostureAppTests */,
 				EA9049B324E136A7009437B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -188,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9049B224E136A7009437B8 /* RowingPostureApp.app */,
+				24F71CBF24FE3570007D3733 /* RowingPostureAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -307,6 +339,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		24F71CBE24FE3570007D3733 /* RowingPostureAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24F71CC624FE3570007D3733 /* Build configuration list for PBXNativeTarget "RowingPostureAppTests" */;
+			buildPhases = (
+				24F71CBB24FE3570007D3733 /* Sources */,
+				24F71CBC24FE3570007D3733 /* Frameworks */,
+				24F71CBD24FE3570007D3733 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24F71CC524FE3570007D3733 /* PBXTargetDependency */,
+			);
+			name = RowingPostureAppTests;
+			productName = RowingPostureAppTests;
+			productReference = 24F71CBF24FE3570007D3733 /* RowingPostureAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EA9049B124E136A7009437B8 /* RowingPostureApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA9049C624E136A9009437B8 /* Build configuration list for PBXNativeTarget "RowingPostureApp" */;
@@ -330,10 +380,14 @@
 		EA9049AA24E136A7009437B8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = xDesign;
 				TargetAttributes = {
+					24F71CBE24FE3570007D3733 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = EA9049B124E136A7009437B8;
+					};
 					EA9049B124E136A7009437B8 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -353,11 +407,19 @@
 			projectRoot = "";
 			targets = (
 				EA9049B124E136A7009437B8 /* RowingPostureApp */,
+				24F71CBE24FE3570007D3733 /* RowingPostureAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		24F71CBD24FE3570007D3733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA9049B024E136A7009437B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,6 +433,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		24F71CBB24FE3570007D3733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24F71CCA24FE3596007D3733 /* CoordinatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA9049AE24E136A7009437B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,6 +486,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		24F71CC524FE3570007D3733 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA9049B124E136A7009437B8 /* RowingPostureApp */;
+			targetProxy = 24F71CC424FE3570007D3733 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		EA9049BB24E136A7009437B8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -436,6 +514,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		24F71CC724FE3570007D3733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZSM2D4RUSA;
+				INFOPLIST_FILE = RowingPostureAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kynan.RowingPostureAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RowingPostureApp.app/RowingPostureApp";
+			};
+			name = Debug;
+		};
+		24F71CC824FE3570007D3733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZSM2D4RUSA;
+				INFOPLIST_FILE = RowingPostureAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kynan.RowingPostureAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RowingPostureApp.app/RowingPostureApp";
+			};
+			name = Release;
+		};
 		EA9049C424E136A9009437B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -591,6 +711,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		24F71CC624FE3570007D3733 /* Build configuration list for PBXNativeTarget "RowingPostureAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F71CC724FE3570007D3733 /* Debug */,
+				24F71CC824FE3570007D3733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA9049AD24E136A7009437B8 /* Build configuration list for PBXProject "RowingPostureApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -3,8 +3,7 @@
 //  RowingPostureApp
 //
 //  Created by Kynan Song on 10/08/2020.
-// Based off PoseFinder App
-//  Copyright © 2020 xDesign. All rights reserved.
+//  Based off PoseFinder App
 //
 
 import CoreGraphics

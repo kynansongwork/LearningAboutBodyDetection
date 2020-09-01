@@ -250,8 +250,8 @@
             filePath = "RowingPostureApp/UI/Coordinators/AppCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "prepare()"
             landmarkType = "7">
          </BreakpointContent>

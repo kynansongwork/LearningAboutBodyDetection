@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class VideoCaptureViewController: UIViewController, StoryboardLoadedViewController {
     
@@ -15,9 +16,20 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
     @IBOutlet weak var recordButton: RoundButton!
     @IBOutlet weak var rateLabel: UILabel!
     
+    @IBOutlet weak var cameraView: UIView!
+    
+    var captureSession: AVCaptureSession!
+    var previewLayer: AVCaptureVideoPreviewLayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCloseButton()
+        setUpCamera()
+    }
+    
+    func setUpCamera() {
+        cameraView.backgroundColor = UIColor.black
+        captureSession = AVCaptureSession()
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {

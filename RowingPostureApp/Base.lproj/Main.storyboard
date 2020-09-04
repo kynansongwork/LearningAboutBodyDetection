@@ -175,6 +175,7 @@
                         <viewLayoutGuide key="safeArea" id="EBf-77-0ur"/>
                     </view>
                     <connections>
+                        <outlet property="cameraView" destination="Bqd-pj-bk6" id="WIw-iO-JBR"/>
                         <outlet property="closeButton" destination="g2H-ww-bIN" id="HiT-Qg-eb0"/>
                         <outlet property="rateLabel" destination="HhH-zJ-aJL" id="XvR-UI-mCF"/>
                         <outlet property="recordButton" destination="43l-jY-jsU" id="1DH-32-tGr"/>

@@ -25,6 +25,7 @@
 		24F71C7924FD7440007D3733 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7824FD7440007D3733 /* SettingsViewModel.swift */; };
 		24F71C7B24FD7551007D3733 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7A24FD7551007D3733 /* Settings.swift */; };
 		24F71CCA24FE3596007D3733 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71CC924FE3596007D3733 /* CoordinatorTests.swift */; };
+		24F71CCF25051F11007D3733 /* PoseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71CCE25051F11007D3733 /* PoseImageView.swift */; };
 		EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049B524E136A7009437B8 /* AppDelegate.swift */; };
 		EA9049BD24E136A7009437B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9049BB24E136A7009437B8 /* Main.storyboard */; };
 		EA9049BF24E136A9009437B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9049BE24E136A9009437B8 /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		24F71CBF24FE3570007D3733 /* RowingPostureAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RowingPostureAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F71CC324FE3570007D3733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24F71CC924FE3596007D3733 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoordinatorTests.swift; path = CoordinatorTests/CoordinatorTests.swift; sourceTree = "<group>"; };
+		24F71CCE25051F11007D3733 /* PoseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseImageView.swift; sourceTree = "<group>"; };
 		EA9049B224E136A7009437B8 /* RowingPostureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RowingPostureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9049B524E136A7009437B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9049BC24E136A7009437B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				24656D9B24F90AF500F9D288 /* VideoCaptureViewController.swift */,
 				24656D9D24F90B0400F9D288 /* VideoCaptureViewModel.swift */,
+				24F71CCE25051F11007D3733 /* PoseImageView.swift */,
 			);
 			path = "Video Capture";
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				24656D9324F7CE8600F9D288 /* VideoCaptureUtility.swift in Sources */,
 				EA9049FA24EFC0BE009437B8 /* CGPointExtensions.swift in Sources */,
 				24656DA024F90D8700F9D288 /* MainOptionsViewModel.swift in Sources */,
+				24F71CCF25051F11007D3733 /* PoseImageView.swift in Sources */,
 				EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */,
 				24873CE424FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift in Sources */,
 				24F71C7924FD7440007D3733 /* SettingsViewModel.swift in Sources */,

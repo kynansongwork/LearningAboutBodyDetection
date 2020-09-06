@@ -107,6 +107,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LAe-Ak-CSp">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqd-pj-bk6" userLabel="Camera View">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -164,12 +167,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="SHH-de-ceQ" firstAttribute="bottom" secondItem="Bqd-pj-bk6" secondAttribute="bottom" id="2mQ-kv-hac"/>
+                            <constraint firstItem="LAe-Ak-CSp" firstAttribute="centerY" secondItem="c7w-jk-cYN" secondAttribute="centerY" id="7v6-dt-mtP"/>
+                            <constraint firstItem="LAe-Ak-CSp" firstAttribute="width" secondItem="c7w-jk-cYN" secondAttribute="width" id="Fhb-Tc-qJL"/>
                             <constraint firstItem="SHH-de-ceQ" firstAttribute="trailing" secondItem="Bqd-pj-bk6" secondAttribute="trailing" id="GtQ-9W-3rQ"/>
                             <constraint firstItem="SHH-de-ceQ" firstAttribute="top" secondItem="EBf-77-0ur" secondAttribute="top" id="IcC-3s-7Nw"/>
                             <constraint firstItem="Bqd-pj-bk6" firstAttribute="top" secondItem="EBf-77-0ur" secondAttribute="top" id="UcM-5W-oAF"/>
+                            <constraint firstItem="LAe-Ak-CSp" firstAttribute="centerX" secondItem="c7w-jk-cYN" secondAttribute="centerX" id="erj-7r-t0w"/>
                             <constraint firstItem="Bqd-pj-bk6" firstAttribute="leading" secondItem="c7w-jk-cYN" secondAttribute="leading" id="gMG-dl-kiW"/>
                             <constraint firstItem="SHH-de-ceQ" firstAttribute="leading" secondItem="Bqd-pj-bk6" secondAttribute="leading" id="mer-UD-dbb"/>
                             <constraint firstAttribute="bottom" secondItem="Bqd-pj-bk6" secondAttribute="bottom" id="pDv-dy-ICI"/>
+                            <constraint firstItem="LAe-Ak-CSp" firstAttribute="height" secondItem="c7w-jk-cYN" secondAttribute="height" id="qlq-7s-5xj"/>
                             <constraint firstAttribute="trailing" secondItem="Bqd-pj-bk6" secondAttribute="trailing" id="x4X-xA-CU9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EBf-77-0ur"/>

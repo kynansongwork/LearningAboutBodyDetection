@@ -45,3 +45,17 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
         closeButton.isAccessibilityElement = true
     }
 }
+
+extension VideoCaptureViewController: PoseNetModelDelegate {
+    
+    func poseNetModel(_ poseNet: PoseNetModel, didPredict predictions: PoseNetOutput) {
+        
+        // defer is used to execute code before moving to the next order of actions.
+        // In cases of multiple defers, the functions will run in reverse order of their execution.
+        defer {
+            <#deferred statements#>
+        }
+    }
+    
+    
+}

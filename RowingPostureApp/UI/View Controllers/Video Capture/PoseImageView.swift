@@ -110,12 +110,29 @@ class PoseImageView: UIImageView {
         cgContext.restoreGState()
     }
     
+    // A circle is drawn at a given/valid point.
     func drawCircles(circle joint: Joint, in cgContext: CGContext) {
         
+        cgContext.setFillColor(jointColour.cgColor)
+        
+        let rectangle = CGRect(x: joint.jointPosition.x - jointRadius, y: joint.jointPosition.y - jointRadius,
+                               width: jointRadius * 2, height: jointRadius * 2)
+        // Adds an elipse that will fit in a set rectangle.
+        cgContext.addEllipse(in: rectangle)
+        cgContext.drawPath(using: .fill)
     }
     
     // Method to render the connection between joint pairs.
+    // The parameters used are the parent and child joints which represent the start and end of the drawn line.
+    // cgContext will provide the rendering context.
     func drawLine(from parentJoint: Joint, to childJoint: Joint, in cgContext: CGContext) {
         
+        cgContext.setStrokeColor(segmentColour.cgColor)
+        cgContext.setLineWidth(segmentLineWidth)
+        
+        // Drawing the line from point to point.
+        cgContext.move(to: parentJoint.jointPosition)
+        cgContext.addLine(to: childJoint.jointPosition)
+        cgContext.strokePath()
     }
 }

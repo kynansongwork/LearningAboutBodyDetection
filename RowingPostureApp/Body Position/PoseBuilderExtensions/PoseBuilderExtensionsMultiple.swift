@@ -9,4 +9,6 @@ import CoreGraphics
 
 extension PoseBuilder {
     
+    //For multiple poses
+    
 }

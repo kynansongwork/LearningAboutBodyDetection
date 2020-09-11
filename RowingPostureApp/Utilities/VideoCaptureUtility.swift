@@ -11,7 +11,7 @@ import UIKit
 import VideoToolbox
 
 protocol VideoCaptureDelegate: AnyObject {
-    func videoCapture(_ videoCapture: VideoCapture, didCaptureFrame image: CGImage?)
+    func videoCapture(_ videoCapture: VideoCapture, didCaptureFrame capturedImage: CGImage?)
 }
 
 class VideoCapture: NSObject {

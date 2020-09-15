@@ -100,6 +100,7 @@ class PoseImageView: UIImageView {
         cgContext.saveGState()
         
         // The context will be flipped prior to image rendering as the image passed in will be assumed to be flipped.
+        // Back ground image won't render when scale removed.
         cgContext.scaleBy(x: 1.0, y: -1.0)
         
         // Next the rendered image is adjusted for the scale changes made.

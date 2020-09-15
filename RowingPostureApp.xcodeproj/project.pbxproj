@@ -135,6 +135,13 @@
 			path = "UI Components";
 			sourceTree = "<group>";
 		};
+		244D392D2510AD5800F1D671 /* Settings Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Settings Cells";
+			sourceTree = "<group>";
+		};
 		24656D8824F57A6B00F9D288 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +182,7 @@
 		24873CDF24FCF29E008E0D7A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				244D392D2510AD5800F1D671 /* Settings Cells */,
 				24873CE024FCF2B5008E0D7A /* SettingsViewController.swift */,
 				24F71C7824FD7440007D3733 /* SettingsViewModel.swift */,
 			);

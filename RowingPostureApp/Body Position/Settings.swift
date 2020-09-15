@@ -21,4 +21,5 @@ struct SettingsHeaders {
     let localSearchRadius: String = "Local joint search radius"
     let matchingMinimumDistance: String = "Matching joint minimum distance"
     let adjacentRefinementSteps: String = "Adjacent joint refinement steps"
+    let blueTooth: String = "Bluetooth Settings"
 }

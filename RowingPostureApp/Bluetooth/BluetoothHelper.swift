@@ -16,6 +16,7 @@ protocol BluetoothInterface {
 
 class BluetoothHelper: NSObject, BluetoothInterface {
     
+    static let shared = BluetoothHelper()
     var manager: CBCentralManager?
     
     var didUpdateCharacteristics:((CBCharacteristic?, CBPeripheral?) ->())?
@@ -46,9 +47,22 @@ class BluetoothHelper: NSObject, BluetoothInterface {
 extension BluetoothHelper: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         // Need to read PM5 docs.
+        switch central.state {
+            
+        case .unknown:
+            print("State is unknown.")
+        case .resetting:
+            print("State is resetting.")
+        case .unsupported:
+            print("State is unsupported.")
+        case .unauthorized:
+            print("State is unauthorised.")
+        case .poweredOff:
+            print("State is Off.")
+        case .poweredOn:
+            print("State is On.")
+        }
     }
-    
-    
 }
 
 //https://www.raywenderlich.com/231-core-bluetooth-tutorial-for-ios-heart-rate-monitor

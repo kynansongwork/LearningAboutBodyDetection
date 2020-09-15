@@ -17,12 +17,11 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(viewModel)
+        AppUtility.lockOrientation(.landscapeRight)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        AppUtility.lockOrientation(.landscapeRight)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

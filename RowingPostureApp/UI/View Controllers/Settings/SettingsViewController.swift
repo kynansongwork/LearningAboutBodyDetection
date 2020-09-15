@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 class SettingsViewController: UIViewController, StoryboardLoadedViewController {
     var viewModel: SettingsViewModel!
     
     @IBOutlet weak var tableView: UITableView!
-    var othermodel: MainOptionsViewModel!
     
     let cellReuseIdentifier = "cell"
     

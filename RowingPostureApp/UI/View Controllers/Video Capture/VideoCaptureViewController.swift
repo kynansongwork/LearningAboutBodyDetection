@@ -28,9 +28,6 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
     private var algorithm: Algorithm = .single
     private var poseBuilderConfig = PoseBuilderConfiguration()
     
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCloseButton()
@@ -68,6 +65,11 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
         }
     }
     
+    @IBAction func recordButtonTapped(_ sender: Any) {
+        
+        //When tapped, the record button will screen record.
+        print("Record Tapped.")
+    }
     
     
     @IBAction func closeButtonTapped(_ sender: Any) {

@@ -67,7 +67,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="488" id="BUu-nd-y0C"/>
                                     <constraint firstItem="7gO-Dr-nbP" firstAttribute="top" secondItem="WhN-Eg-JeT" secondAttribute="top" id="Bxn-DZ-H9A"/>
@@ -80,7 +80,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IFK-es-32l" secondAttribute="trailing" constant="10" id="CLr-l3-tbV"/>
                             <constraint firstItem="WhN-Eg-JeT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DLy-xm-ULF"/>
@@ -113,8 +113,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHH-de-ceQ" userLabel="Overlay View">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43l-jY-jsU" customClass="RoundButton" customModule="RowingPostureApp" customModuleProvider="target">
-                                        <rect key="frame" x="787" y="192" width="49" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43l-jY-jsU">
+                                        <rect key="frame" x="827" y="192" width="49" height="30"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Record">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,22 +123,28 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="80"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="recordButtonTapped:" destination="ALd-Hh-zTC" eventType="touchUpInside" id="AK7-XX-tbk"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeU-Df-2gv">
-                                        <rect key="frame" x="801" y="316" width="35" height="21"/>
+                                        <rect key="frame" x="841" y="301" width="35" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-zJ-aJL">
-                                        <rect key="frame" x="822.5" y="345" width="13.5" height="24"/>
+                                        <rect key="frame" x="862.5" y="330" width="13.5" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2H-ww-bIN">
-                                        <rect key="frame" x="52" y="23" width="1" height="22"/>
+                                        <rect key="frame" x="40" y="23" width="30" height="30"/>
                                         <state key="normal" image="icClose"/>
                                         <connections>
                                             <action selector="closeButtonTapped:" destination="ALd-Hh-zTC" eventType="touchUpInside" id="tDL-fU-3ZI"/>
@@ -147,15 +153,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="QeU-Df-2gv" secondAttribute="trailing" constant="60" id="3Lb-yD-17v"/>
+                                    <constraint firstAttribute="trailing" secondItem="QeU-Df-2gv" secondAttribute="trailing" constant="20" id="3Lb-yD-17v"/>
                                     <constraint firstItem="43l-jY-jsU" firstAttribute="top" secondItem="SHH-de-ceQ" secondAttribute="top" constant="192" id="Iq5-6l-AYW"/>
-                                    <constraint firstAttribute="trailing" secondItem="HhH-zJ-aJL" secondAttribute="trailing" constant="60" id="J0q-zO-QKc"/>
-                                    <constraint firstAttribute="bottom" secondItem="HhH-zJ-aJL" secondAttribute="bottom" constant="45" id="Se3-U2-4ex"/>
+                                    <constraint firstAttribute="trailing" secondItem="HhH-zJ-aJL" secondAttribute="trailing" constant="20" id="J0q-zO-QKc"/>
+                                    <constraint firstAttribute="bottom" secondItem="HhH-zJ-aJL" secondAttribute="bottom" constant="60" id="Se3-U2-4ex"/>
                                     <constraint firstAttribute="bottom" secondItem="43l-jY-jsU" secondAttribute="bottom" constant="192" id="U8x-2i-GoT"/>
                                     <constraint firstItem="43l-jY-jsU" firstAttribute="centerY" secondItem="SHH-de-ceQ" secondAttribute="centerY" id="cka-WT-UtD"/>
                                     <constraint firstItem="g2H-ww-bIN" firstAttribute="top" secondItem="SHH-de-ceQ" secondAttribute="top" constant="23" id="du1-cR-uCI"/>
-                                    <constraint firstAttribute="trailing" secondItem="43l-jY-jsU" secondAttribute="trailing" constant="60" id="gI0-i6-KF2"/>
-                                    <constraint firstItem="g2H-ww-bIN" firstAttribute="leading" secondItem="SHH-de-ceQ" secondAttribute="leading" constant="52" id="mVG-ix-XWg"/>
+                                    <constraint firstAttribute="trailing" secondItem="43l-jY-jsU" secondAttribute="trailing" constant="20" id="gI0-i6-KF2"/>
+                                    <constraint firstItem="g2H-ww-bIN" firstAttribute="leading" secondItem="SHH-de-ceQ" secondAttribute="leading" constant="40" id="mVG-ix-XWg"/>
                                     <constraint firstItem="HhH-zJ-aJL" firstAttribute="top" secondItem="QeU-Df-2gv" secondAttribute="bottom" constant="8" id="ql0-H3-hvI"/>
                                 </constraints>
                             </view>
@@ -176,7 +182,7 @@
                         <outlet property="closeButton" destination="g2H-ww-bIN" id="HiT-Qg-eb0"/>
                         <outlet property="poseImageView" destination="LAe-Ak-CSp" id="MmN-Lv-jmg"/>
                         <outlet property="rateLabel" destination="HhH-zJ-aJL" id="XvR-UI-mCF"/>
-                        <outlet property="recordButton" destination="43l-jY-jsU" id="1DH-32-tGr"/>
+                        <outlet property="recordButton" destination="43l-jY-jsU" id="1SL-ec-Rzz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgi-Su-u71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -16,8 +16,11 @@ protocol BluetoothInterface {
 
 class BluetoothHelper: NSObject, BluetoothInterface {
     
+    let pm5CBUUID = CBUUID(string: "CE060000-43E5-11E4-916C-0800200C9A66")
+    
     static let shared = BluetoothHelper()
     var manager: CBCentralManager?
+    var pm5Peripheral: CBPeripheral!
     
     var didUpdateCharacteristics:((CBCharacteristic?, CBPeripheral?) ->())?
     
@@ -30,7 +33,11 @@ class BluetoothHelper: NSObject, BluetoothInterface {
     }
     
     func scanForDevices() {
-        //
+        if let deviceManager = self.manager, deviceManager.state == .poweredOn {
+            deviceManager.scanForPeripherals(withServices: [pm5CBUUID], options: nil)
+        } else {
+            print("Bluetooth has not been enabled.")
+        }
     }
     
     func stopScan() {
@@ -63,6 +70,14 @@ extension BluetoothHelper: CBCentralManagerDelegate {
             print("State is On.")
         }
     }
+    
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        //print(peripheral)
+        pm5Peripheral = peripheral
+        manager?.stopScan()
+        print(pm5Peripheral)
+    }
 }
 
 //https://www.raywenderlich.com/231-core-bluetooth-tutorial-for-ios-heart-rate-monitor
+// https://www.concept2.com/files/pdf/us/monitors/PM5_BluetoothSmartInterfaceDefinition.pdf

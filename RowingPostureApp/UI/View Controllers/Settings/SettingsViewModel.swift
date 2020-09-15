@@ -22,4 +22,8 @@ class SettingsViewModel: BaseViewModel {
         self.blueToothHelper = BluetoothHelper.shared
         super.init(coordinator: coordinator)
     }
+    
+    func scanForDevices() {
+        blueToothHelper.scanForDevices()
+    }
 }

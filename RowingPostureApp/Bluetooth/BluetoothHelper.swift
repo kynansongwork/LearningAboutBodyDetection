@@ -74,8 +74,29 @@ extension BluetoothHelper: CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         //print(peripheral)
         pm5Peripheral = peripheral
+        pm5Peripheral.delegate = self
         manager?.stopScan()
+        
+        //TODO: Will need to move this to somewhere where selection can be done, in cases of more than one machine.
         print(pm5Peripheral)
+        manager?.connect(pm5Peripheral)
+    }
+    
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        print("Connected son!")
+        pm5Peripheral.discoverServices(nil)
+    }
+}
+
+extension BluetoothHelper: CBPeripheralDelegate {
+    
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+        
+        guard let pm5Services = peripheral.services else { return }
+        
+        for service in pm5Services {
+            print(service)
+        }
     }
 }
 

@@ -18,6 +18,8 @@
 		24656D9C24F90AF600F9D288 /* VideoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9B24F90AF500F9D288 /* VideoCaptureViewController.swift */; };
 		24656D9E24F90B0400F9D288 /* VideoCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9D24F90B0400F9D288 /* VideoCaptureViewModel.swift */; };
 		24656DA024F90D8700F9D288 /* MainOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9F24F90D8700F9D288 /* MainOptionsViewModel.swift */; };
+		247073A7251F7548002CA0D6 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247073A6251F7548002CA0D6 /* SettingsCell.xib */; };
+		247073A9251F75FB002CA0D6 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247073A8251F75FB002CA0D6 /* SettingsCell.swift */; };
 		24873CE124FCF2B5008E0D7A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24873CE024FCF2B5008E0D7A /* SettingsViewController.swift */; };
 		24873CE424FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24873CE324FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift */; };
 		24873CE624FD2619008E0D7A /* AVCaptureVideoOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24873CE524FD2619008E0D7A /* AVCaptureVideoOrientation.swift */; };
@@ -72,6 +74,8 @@
 		24656D9B24F90AF500F9D288 /* VideoCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureViewController.swift; sourceTree = "<group>"; };
 		24656D9D24F90B0400F9D288 /* VideoCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureViewModel.swift; sourceTree = "<group>"; };
 		24656D9F24F90D8700F9D288 /* MainOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewModel.swift; sourceTree = "<group>"; };
+		247073A6251F7548002CA0D6 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		247073A8251F75FB002CA0D6 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		24873CE024FCF2B5008E0D7A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		24873CE324FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureUtilityExtension.swift; sourceTree = "<group>"; };
 		24873CE524FD2619008E0D7A /* AVCaptureVideoOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureVideoOrientation.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 		244D392D2510AD5800F1D671 /* Settings Cells */ = {
 			isa = PBXGroup;
 			children = (
+				247073A6251F7548002CA0D6 /* SettingsCell.xib */,
+				247073A8251F75FB002CA0D6 /* SettingsCell.swift */,
 			);
 			path = "Settings Cells";
 			sourceTree = "<group>";
@@ -437,6 +443,7 @@
 			files = (
 				EA9049C224E136A9009437B8 /* LaunchScreen.storyboard in Resources */,
 				EA9049BF24E136A9009437B8 /* Assets.xcassets in Resources */,
+				247073A7251F7548002CA0D6 /* SettingsCell.xib in Resources */,
 				EA9049BD24E136A7009437B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +479,7 @@
 				EA9049D124E13977009437B8 /* PoseNetModel.swift in Sources */,
 				EA9049E424EBC812009437B8 /* ModeledViewController.swift in Sources */,
 				EA9049D324E28A54009437B8 /* PoseNetInput.swift in Sources */,
+				247073A9251F75FB002CA0D6 /* SettingsCell.swift in Sources */,
 				24656D9324F7CE8600F9D288 /* VideoCaptureUtility.swift in Sources */,
 				EA9049FA24EFC0BE009437B8 /* CGPointExtensions.swift in Sources */,
 				24656DA024F90D8700F9D288 /* MainOptionsViewModel.swift in Sources */,

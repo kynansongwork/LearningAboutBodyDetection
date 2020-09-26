@@ -13,8 +13,6 @@ class SettingsViewController: UIViewController, StoryboardLoadedViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let cellReuseIdentifier = "cell"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +21,8 @@ class SettingsViewController: UIViewController, StoryboardLoadedViewController {
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableView.automaticDimension
         
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(UINib(nibName: "SettingsCell", bundle: nil), forCellReuseIdentifier: "settingsCell")
         
         setUpNavBar()
     }
@@ -62,19 +61,23 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
+        let baseCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let settingCell = tableView.dequeueReusableCell(withIdentifier:
+            "settingsCell", for: indexPath) as! SettingsCell
         
-        if let settingsCell = cell as? UITableViewCell {
-            settingsCell.textLabel?.text = viewModel.cells[indexPath.row]
-            
-            return cell
+        if indexPath.row != 5 {
+            settingCell.settingLabel.text = viewModel.cells[indexPath.row]
+            return settingCell
+        } else {
+            baseCell.textLabel?.text = viewModel.cells[5]
+            return baseCell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(viewModel.cells[indexPath.row])
         
-        if indexPath.row == 5 {
+        if viewModel.cells[indexPath.row] == SettingsHeaders().blueTooth {
             viewModel.scanForDevices()
         }
     }

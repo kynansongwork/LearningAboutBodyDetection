@@ -84,7 +84,9 @@ extension BluetoothHelper: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("Connected son!")
-        pm5Peripheral.discoverServices(nil)
+        pm5Peripheral.discoverServices([pm5CBUUID])
+        
+        // rowing service: CE060030-43E5-11E4-916C-0800200C9A66
     }
 }
 
@@ -96,9 +98,22 @@ extension BluetoothHelper: CBPeripheralDelegate {
         
         for service in pm5Services {
             print(service)
+            
+            peripheral.discoverCharacteristics(nil, for: service)
+            //print(service.characteristics ?? "The characteristics are nil")
+        }
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
+        
+        guard let pm5Characteristics = service.characteristics else { return }
+        
+        for characteristic in pm5Characteristics {
+            print(characteristic)
         }
     }
 }
 
-//https://www.raywenderlich.com/231-core-bluetooth-tutorial-for-ios-heart-rate-monitor
+// https://www.raywenderlich.com/231-core-bluetooth-tutorial-for-ios-heart-rate-monitor
 // https://www.concept2.com/files/pdf/us/monitors/PM5_BluetoothSmartInterfaceDefinition.pdf
+// https://c2forum.com/viewtopic.php?f=15&t=81699

@@ -10,6 +10,13 @@ import Foundation
 class SettingsViewModel: BaseViewModel {
     
     var blueToothHelper: BluetoothInterface
+    var poseBuilderConfiguration = PoseBuilderConfiguration()
+    
+    var configuration: PoseBuilderConfiguration! {
+        didSet {
+            poseBuilderConfiguration = configuration
+        }
+    }
     
     let cells: [String] = [SettingsHeaders().jointConfidence,
                            SettingsHeaders().poseConfidence,
@@ -25,5 +32,9 @@ class SettingsViewModel: BaseViewModel {
     
     func scanForDevices() {
         blueToothHelper.scanForDevices()
+    }
+    
+    func configureConfidenceLevels() {
+        
     }
 }

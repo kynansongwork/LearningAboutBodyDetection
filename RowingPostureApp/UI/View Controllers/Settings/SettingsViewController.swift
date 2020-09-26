@@ -65,6 +65,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         let settingCell = tableView.dequeueReusableCell(withIdentifier:
             "settingsCell", for: indexPath) as! SettingsCell
         
+        settingCell.confidenceValueSlider.tag = indexPath.row
+        settingCell.confidenceValueSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+        
         if indexPath.row != 5 {
             settingCell.settingLabel.text = viewModel.cells[indexPath.row]
             return settingCell
@@ -72,6 +75,12 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             baseCell.textLabel?.text = viewModel.cells[5]
             return baseCell
         }
+    }
+    
+    @objc func sliderValueChanged(sender: UISlider) {
+        let currentValue = Int(sender.value)
+        let row = sender.tag
+        print("\(viewModel.cells[row]) has a confidence level of \(currentValue).")
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

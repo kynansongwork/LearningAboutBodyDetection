@@ -68,7 +68,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 4e872c42aefd4a03"
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - ea49f9a7748d8534"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -83,7 +83,7 @@
                   offsetFromSymbolStart = "126">
                </Location>
                <Location
-                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 44fe60c526c72ef7"
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - e030b520fcb7e1c0"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -98,7 +98,7 @@
                   offsetFromSymbolStart = "160">
                </Location>
                <Location
-                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - b73d552fcb323300"
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 13f380ca1142e3c0"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -113,7 +113,7 @@
                   offsetFromSymbolStart = "18">
                </Location>
                <Location
-                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 4c2638cbd73a0b2"
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - a00cb66967036f85"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -128,7 +128,7 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 29f34a6e623a9cf8"
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 8d3d9f8bb84a53cf"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -143,7 +143,7 @@
                   offsetFromSymbolStart = "182">
                </Location>
                <Location
-                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - eb7c0a1bfdeebece"
+                  uuid = "E3A7020E-FEC5-4479-841C-88205DBDE02F - 4fb2dffe279e71f9"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -172,8 +172,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "instatiateFromStoryboard(storyboard:with:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -204,8 +204,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "instatiateFromStoryboard(storyboard:with:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -220,8 +220,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "instatiateFromStoryboard(storyboard:with:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -282,8 +282,8 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "dismissSettings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,8 +410,8 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -426,8 +426,8 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "sliderValueChanged(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -442,9 +442,57 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "sliderValueChanged(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC55CC22-F63C-4D3B-B379-9741B2E30259"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "configureConfidenceLevels(sliderRow:sliderValue:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81CAD3C5-84BD-419C-8066-91C684DEF5D9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "configureConfidenceLevels(sliderRow:sliderValue:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EDD4D847-6D23-49B5-BB3D-DA26C6DCBBEC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

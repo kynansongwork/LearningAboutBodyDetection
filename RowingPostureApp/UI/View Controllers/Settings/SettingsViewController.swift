@@ -27,6 +27,12 @@ class SettingsViewController: UIViewController, StoryboardLoadedViewController {
         setUpNavBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print(viewModel.configuration.jointConfidenceThreshold)
+    }
+    
     func setUpNavBar() {
         
         let closeButton = UIButton()
@@ -70,6 +76,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row != 5 {
             settingCell.settingLabel.text = viewModel.cells[indexPath.row]
+            
+            if indexPath.row == 0 {
+                settingCell.confidenceValueSlider.value = Float(viewModel.configuration.jointConfidenceThreshold)
+            }
+            
             return settingCell
         } else {
             baseCell.textLabel?.text = viewModel.cells[5]
@@ -81,6 +92,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         let currentValue = Int(sender.value)
         let row = sender.tag
         print("\(viewModel.cells[row]) has a confidence level of \(currentValue).")
+        viewModel.configureConfidenceLevels(sliderRow: row, sliderValue: currentValue)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

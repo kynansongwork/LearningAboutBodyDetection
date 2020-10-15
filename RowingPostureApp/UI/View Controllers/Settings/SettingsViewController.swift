@@ -29,12 +29,10 @@ class SettingsViewController: UIViewController, StoryboardLoadedViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print(viewModel.configuration.jointConfidenceThreshold)
+        viewModel.loadSettings()
     }
     
     func setUpNavBar() {
-        
         let closeButton = UIButton()
         let closeImage = UIImage(named: "icClose")
         let whiteImage = closeImage?.withRenderingMode(.alwaysTemplate)
@@ -54,6 +52,7 @@ class SettingsViewController: UIViewController, StoryboardLoadedViewController {
     
     @objc func dismissSettings() {
         viewModel.coordinator?.dismiss()
+        viewModel.saveSettings()
     }
 }
 

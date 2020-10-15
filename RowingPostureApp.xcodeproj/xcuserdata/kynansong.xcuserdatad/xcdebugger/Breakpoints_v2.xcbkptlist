@@ -172,8 +172,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "instatiateFromStoryboard(storyboard:with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -204,8 +204,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "instatiateFromStoryboard(storyboard:with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -220,8 +220,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "instatiateFromStoryboard(storyboard:with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -282,8 +282,8 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "dismissSettings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,8 +410,8 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -420,6 +420,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B735B82D-7BFB-4061-8DE0-AABE934C4DFE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "sliderValueChanged(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "087AE4FA-716A-47E2-9535-504FC82C5A43"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -435,39 +451,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "087AE4FA-716A-47E2-9535-504FC82C5A43"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "sliderValueChanged(sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "DC55CC22-F63C-4D3B-B379-9741B2E30259"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "configureConfidenceLevels(sliderRow:sliderValue:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "81CAD3C5-84BD-419C-8066-91C684DEF5D9"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -483,16 +467,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EDD4D847-6D23-49B5-BB3D-DA26C6DCBBEC"
-            shouldBeEnabled = "Yes"
+            uuid = "81CAD3C5-84BD-419C-8066-91C684DEF5D9"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
+            filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "configureConfidenceLevels(sliderRow:sliderValue:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

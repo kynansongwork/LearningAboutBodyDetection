@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Settings {
+struct Settings: Codable {
     var jointConfidence: Double
     var poseConfidence: Double
     var localSearchRadius: Double

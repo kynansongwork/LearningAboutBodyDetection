@@ -11,6 +11,7 @@ class SettingsViewModel: BaseViewModel {
     
     var blueToothHelper: BluetoothInterface
     var poseBuilderConfiguration = PoseBuilderConfiguration()
+    let confidenceConfigurations = UserDefaults.standard
     
     var configuration: PoseBuilderConfiguration! {
         didSet {
@@ -56,11 +57,27 @@ class SettingsViewModel: BaseViewModel {
     
     func saveSettings() {
         //Save the settings to user defaults.
-        let confidenceConfigurations = UserDefaults.standard
-        confidenceConfigurations.set(configuration.jointConfidenceThreshold, forKey: "jointConfidence")
-        confidenceConfigurations.set(configuration.poseConfidenceThreshold, forKey: "poseConfidence")
-        confidenceConfigurations.set(configuration.localSearchRadius, forKey: "searchRadius")
-        confidenceConfigurations.set(configuration.matchingJointDistance, forKey: "jointDistance")
-        confidenceConfigurations.set(configuration.adjacentJointOffsetRefinementSteps, forKey: "jointOffset")
+        // Currently only saving one setting: joint confidence.
+        let settingsStruct = Settings(jointConfidence: configuration.jointConfidenceThreshold, poseConfidence: configuration.poseConfidenceThreshold, localSearchRadius: Double(configuration.localSearchRadius), matchingMinimumDistance: configuration.matchingJointDistance, adjacentRefinementSteps: Double(configuration.adjacentJointOffsetRefinementSteps))
+        
+        let encoder = JSONEncoder()
+        if let encodedSettings = try? encoder.encode(settingsStruct) {
+            confidenceConfigurations.set(encodedSettings, forKey: "currentSettings")
+        }
+    }
+    
+    func loadSettings() {
+        guard let savedSettings = confidenceConfigurations.object(forKey: "currentSettings") as? Data else { return }
+        
+        let decoder = JSONDecoder()
+        if let loadedSettings = try? decoder.decode(Settings.self, from: savedSettings) {
+            configureConfidenceLevels(sliderRow: 0, sliderValue: Int(loadedSettings.jointConfidence))
+            configureConfidenceLevels(sliderRow: 1, sliderValue: Int(loadedSettings.poseConfidence))
+            configureConfidenceLevels(sliderRow: 2, sliderValue: Int(loadedSettings.localSearchRadius))
+            configureConfidenceLevels(sliderRow: 3, sliderValue: Int(loadedSettings.matchingMinimumDistance))
+            configureConfidenceLevels(sliderRow: 4, sliderValue: Int(loadedSettings.adjacentRefinementSteps))
+        }
+        
+       
     }
 }

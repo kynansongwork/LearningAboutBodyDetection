@@ -41,7 +41,6 @@ class SettingsViewModel: BaseViewModel {
         switch sliderRow {
         case 0:
             configuration.jointConfidenceThreshold = Double(sliderValue)
-            print(configuration.jointConfidenceThreshold)
         case 1:
             configuration.poseConfidenceThreshold = Double(sliderValue)
         case 2:
@@ -77,7 +76,5 @@ class SettingsViewModel: BaseViewModel {
             configureConfidenceLevels(sliderRow: 3, sliderValue: Int(loadedSettings.matchingMinimumDistance))
             configureConfidenceLevels(sliderRow: 4, sliderValue: Int(loadedSettings.adjacentRefinementSteps))
         }
-        
-       
     }
 }

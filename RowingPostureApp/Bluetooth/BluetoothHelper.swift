@@ -100,6 +100,7 @@ extension BluetoothHelper: CBPeripheralDelegate {
             print(service)
             
             peripheral.discoverCharacteristics(nil, for: service)
+            //MARK: Get characteristics from PM5.
             //print(service.characteristics ?? "The characteristics are nil")
         }
     }

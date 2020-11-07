@@ -78,6 +78,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             
             if indexPath.row == 0 {
                 settingCell.confidenceValueSlider.value = Float(viewModel.configuration.jointConfidenceThreshold)
+            } else if indexPath.row == 1 {
+                settingCell.confidenceValueSlider.value = Float(viewModel.configuration.poseConfidenceThreshold)
+            } else if indexPath.row == 2 {
+                settingCell.confidenceValueSlider.value = Float(viewModel.configuration.localSearchRadius)
+            } else if indexPath.row == 3 {
+                settingCell.confidenceValueSlider.value = Float(viewModel.configuration.matchingJointDistance)
+            } else if indexPath.row == 4 {
+                settingCell.confidenceValueSlider.value = Float(viewModel.configuration.adjacentJointOffsetRefinementSteps)
             }
             
             return settingCell
@@ -90,7 +98,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     @objc func sliderValueChanged(sender: UISlider) {
         let currentValue = Int(sender.value)
         let row = sender.tag
-        print("\(viewModel.cells[row]) has a confidence level of \(currentValue).")
+        //print("\(viewModel.cells[row]) has a confidence level of \(currentValue).")
         viewModel.configureConfidenceLevels(sliderRow: row, sliderValue: currentValue)
     }
     

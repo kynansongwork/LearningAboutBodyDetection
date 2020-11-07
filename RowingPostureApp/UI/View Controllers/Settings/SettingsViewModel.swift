@@ -55,8 +55,6 @@ class SettingsViewModel: BaseViewModel {
     }
     
     func saveSettings() {
-        //Save the settings to user defaults.
-        // Currently only saving one setting: joint confidence.
         let settingsStruct = Settings(jointConfidence: configuration.jointConfidenceThreshold, poseConfidence: configuration.poseConfidenceThreshold, localSearchRadius: Double(configuration.localSearchRadius), matchingMinimumDistance: configuration.matchingJointDistance, adjacentRefinementSteps: Double(configuration.adjacentJointOffsetRefinementSteps))
         
         let encoder = JSONEncoder()

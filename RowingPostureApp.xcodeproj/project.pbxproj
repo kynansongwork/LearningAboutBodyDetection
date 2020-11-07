@@ -18,15 +18,18 @@
 		24656D9C24F90AF600F9D288 /* VideoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9B24F90AF500F9D288 /* VideoCaptureViewController.swift */; };
 		24656D9E24F90B0400F9D288 /* VideoCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9D24F90B0400F9D288 /* VideoCaptureViewModel.swift */; };
 		24656DA024F90D8700F9D288 /* MainOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24656D9F24F90D8700F9D288 /* MainOptionsViewModel.swift */; };
+		2469EB0A2556BB1D00373B13 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469EB092556BB1D00373B13 /* SettingsViewModelTests.swift */; };
 		247073A7251F7548002CA0D6 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247073A6251F7548002CA0D6 /* SettingsCell.xib */; };
 		247073A9251F75FB002CA0D6 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247073A8251F75FB002CA0D6 /* SettingsCell.swift */; };
 		24873CE124FCF2B5008E0D7A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24873CE024FCF2B5008E0D7A /* SettingsViewController.swift */; };
 		24873CE424FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24873CE324FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift */; };
 		24873CE624FD2619008E0D7A /* AVCaptureVideoOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24873CE524FD2619008E0D7A /* AVCaptureVideoOrientation.swift */; };
 		24B834DF24F1245900D8F3A2 /* MainOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */; };
+		24C2FA082556BDE000B00E99 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FA072556BDE000B00E99 /* MockCoordinator.swift */; };
+		24C2FA0E2556BE1900B00E99 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FA0D2556BE1900B00E99 /* MockViewController.swift */; };
 		24F71C7924FD7440007D3733 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7824FD7440007D3733 /* SettingsViewModel.swift */; };
 		24F71C7B24FD7551007D3733 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7A24FD7551007D3733 /* Settings.swift */; };
-		24F71CCA24FE3596007D3733 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71CC924FE3596007D3733 /* CoordinatorTests.swift */; };
+		24F71CCA24FE3596007D3733 /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71CC924FE3596007D3733 /* BaseCoordinatorTests.swift */; };
 		24F71CCF25051F11007D3733 /* PoseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71CCE25051F11007D3733 /* PoseImageView.swift */; };
 		EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9049B524E136A7009437B8 /* AppDelegate.swift */; };
 		EA9049BD24E136A7009437B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9049BB24E136A7009437B8 /* Main.storyboard */; };
@@ -74,17 +77,20 @@
 		24656D9B24F90AF500F9D288 /* VideoCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureViewController.swift; sourceTree = "<group>"; };
 		24656D9D24F90B0400F9D288 /* VideoCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureViewModel.swift; sourceTree = "<group>"; };
 		24656D9F24F90D8700F9D288 /* MainOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewModel.swift; sourceTree = "<group>"; };
+		2469EB092556BB1D00373B13 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
 		247073A6251F7548002CA0D6 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		247073A8251F75FB002CA0D6 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		24873CE024FCF2B5008E0D7A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		24873CE324FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureUtilityExtension.swift; sourceTree = "<group>"; };
 		24873CE524FD2619008E0D7A /* AVCaptureVideoOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureVideoOrientation.swift; sourceTree = "<group>"; };
 		24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewController.swift; sourceTree = "<group>"; };
+		24C2FA072556BDE000B00E99 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
+		24C2FA0D2556BE1900B00E99 /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
 		24F71C7824FD7440007D3733 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		24F71C7A24FD7551007D3733 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		24F71CBF24FE3570007D3733 /* RowingPostureAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RowingPostureAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F71CC324FE3570007D3733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24F71CC924FE3596007D3733 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoordinatorTests.swift; path = CoordinatorTests/CoordinatorTests.swift; sourceTree = "<group>"; };
+		24F71CC924FE3596007D3733 /* BaseCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorTests.swift; sourceTree = "<group>"; };
 		24F71CCE25051F11007D3733 /* PoseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseImageView.swift; sourceTree = "<group>"; };
 		EA9049B224E136A7009437B8 /* RowingPostureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RowingPostureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9049B524E136A7009437B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +191,22 @@
 			path = "Video Capture";
 			sourceTree = "<group>";
 		};
+		2469EB082556BAF700373B13 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				2469EB092556BB1D00373B13 /* SettingsViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		2469EB0F2556BB2500373B13 /* CoordinatorNavigationTests */ = {
+			isa = PBXGroup;
+			children = (
+				24F71CC924FE3596007D3733 /* BaseCoordinatorTests.swift */,
+			);
+			path = CoordinatorNavigationTests;
+			sourceTree = "<group>";
+		};
 		24873CDF24FCF29E008E0D7A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,10 +235,21 @@
 			path = "Main Options";
 			sourceTree = "<group>";
 		};
+		24C2FA062556BDD100B00E99 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				24C2FA072556BDE000B00E99 /* MockCoordinator.swift */,
+				24C2FA0D2556BE1900B00E99 /* MockViewController.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		24F71CC024FE3570007D3733 /* RowingPostureAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				24F71CC924FE3596007D3733 /* CoordinatorTests.swift */,
+				24C2FA062556BDD100B00E99 /* Mocks */,
+				2469EB0F2556BB2500373B13 /* CoordinatorNavigationTests */,
+				2469EB082556BAF700373B13 /* ViewModelTests */,
 				24F71CC324FE3570007D3733 /* Info.plist */,
 			);
 			path = RowingPostureAppTests;
@@ -455,7 +488,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24F71CCA24FE3596007D3733 /* CoordinatorTests.swift in Sources */,
+				24C2FA0E2556BE1900B00E99 /* MockViewController.swift in Sources */,
+				24F71CCA24FE3596007D3733 /* BaseCoordinatorTests.swift in Sources */,
+				2469EB0A2556BB1D00373B13 /* SettingsViewModelTests.swift in Sources */,
+				24C2FA082556BDE000B00E99 /* MockCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

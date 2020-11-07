@@ -118,6 +118,9 @@ extension VideoCaptureViewController: PoseNetModelDelegate {
             return
         }
         
+        //MARK: Test this on device.
+        poseBuilderConfig = viewModel.getConfigurations()
+        
         let poseBuilder = PoseBuilder(output: predictions, configuration: poseBuilderConfig, inputImage: currentFrame)
         
         // For multiple poses.

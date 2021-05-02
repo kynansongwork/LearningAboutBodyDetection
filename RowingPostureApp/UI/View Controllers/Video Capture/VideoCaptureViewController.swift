@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Combine
 
 class VideoCaptureViewController: UIViewController, StoryboardLoadedViewController {
     
@@ -21,6 +22,9 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
     private let videoCapture = VideoCapture()
     private var poseNet: PoseNetModel!
     
+    var cancellables = Set<AnyCancellable>()
+    var rateCount = PassthroughSubject<Int, Never>()
+    
     // Frame that is being used by the PoseNet model to make predictions.
     private var currentFrame: CGImage?
     
@@ -33,6 +37,7 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
         setUpCloseButton()
         setUpCamera()
         self.videoCapture.startCaptureSession()
+        updateRate()
         
         UIApplication.shared.isIdleTimerDisabled = true
         
@@ -84,6 +89,17 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
         closeButton.accessibilityIdentifier = "icClose"
         closeButton.isAccessibilityElement = true
     }
+    
+    func updateRate() {
+        //Use combine here to refresh rate label.
+        
+        rateCount.sink(receiveValue:  { rate in
+            print(rate)
+            self.rateLabel.text = String(rate)
+        }).store(in: &cancellables)
+        
+        rateCount.send(20)
+    }
 }
 
 extension VideoCaptureViewController: VideoCaptureDelegate {
@@ -130,6 +146,4 @@ extension VideoCaptureViewController: PoseNetModelDelegate {
         
         poseImageView.show(poses: poses, on: currentFrame)
     }
-    
-    
 }

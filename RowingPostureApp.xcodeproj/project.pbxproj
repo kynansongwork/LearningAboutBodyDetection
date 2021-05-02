@@ -24,6 +24,7 @@
 		24873CE124FCF2B5008E0D7A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24873CE024FCF2B5008E0D7A /* SettingsViewController.swift */; };
 		24873CE424FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24873CE324FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift */; };
 		24873CE624FD2619008E0D7A /* AVCaptureVideoOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24873CE524FD2619008E0D7A /* AVCaptureVideoOrientation.swift */; };
+		2493D976263EDCAF0097E15A /* VideoCaptureViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493D975263EDCAF0097E15A /* VideoCaptureViewController+Extensions.swift */; };
 		24B834DF24F1245900D8F3A2 /* MainOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */; };
 		24C2FA082556BDE000B00E99 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FA072556BDE000B00E99 /* MockCoordinator.swift */; };
 		24C2FA0E2556BE1900B00E99 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FA0D2556BE1900B00E99 /* MockViewController.swift */; };
@@ -83,6 +84,7 @@
 		24873CE024FCF2B5008E0D7A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		24873CE324FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureUtilityExtension.swift; sourceTree = "<group>"; };
 		24873CE524FD2619008E0D7A /* AVCaptureVideoOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureVideoOrientation.swift; sourceTree = "<group>"; };
+		2493D975263EDCAF0097E15A /* VideoCaptureViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoCaptureViewController+Extensions.swift"; sourceTree = "<group>"; };
 		24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewController.swift; sourceTree = "<group>"; };
 		24C2FA072556BDE000B00E99 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		24C2FA0D2556BE1900B00E99 /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		24656D9924F90AD300F9D288 /* Video Capture */ = {
 			isa = PBXGroup;
 			children = (
+				2493D974263EDC8A0097E15A /* Video Capture + Extensions */,
 				24656D9B24F90AF500F9D288 /* VideoCaptureViewController.swift */,
 				24656D9D24F90B0400F9D288 /* VideoCaptureViewModel.swift */,
 				24F71CCE25051F11007D3733 /* PoseImageView.swift */,
@@ -224,6 +227,22 @@
 				24873CE524FD2619008E0D7A /* AVCaptureVideoOrientation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2493D974263EDC8A0097E15A /* Video Capture + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2493D975263EDCAF0097E15A /* VideoCaptureViewController+Extensions.swift */,
+			);
+			path = "Video Capture + Extensions";
+			sourceTree = "<group>";
+		};
+		24B2095F263EDF65003A90E9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EA9049BB24E136A7009437B8 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		24B834DD24F1244A00D8F3A2 /* Main Options */ = {
@@ -277,6 +296,7 @@
 		EA9049B424E136A7009437B8 /* RowingPostureApp */ = {
 			isa = PBXGroup;
 			children = (
+				24B2095F263EDF65003A90E9 /* Storyboards */,
 				24656D9424F8034B00F9D288 /* Bluetooth */,
 				24656D8824F57A6B00F9D288 /* Utilities */,
 				EA9049F224EFBBF6009437B8 /* CGExtensions */,
@@ -284,7 +304,6 @@
 				EA9049CD24E13815009437B8 /* CoreMLModel */,
 				EA9049CA24E136DF009437B8 /* Body Position */,
 				EA9049B524E136A7009437B8 /* AppDelegate.swift */,
-				EA9049BB24E136A7009437B8 /* Main.storyboard */,
 				EA9049BE24E136A9009437B8 /* Assets.xcassets */,
 				EA9049C024E136A9009437B8 /* LaunchScreen.storyboard */,
 				EA9049C324E136A9009437B8 /* Info.plist */,
@@ -522,6 +541,7 @@
 				24F71CCF25051F11007D3733 /* PoseImageView.swift in Sources */,
 				EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */,
 				24873CE424FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift in Sources */,
+				2493D976263EDCAF0097E15A /* VideoCaptureViewController+Extensions.swift in Sources */,
 				24F71C7924FD7440007D3733 /* SettingsViewModel.swift in Sources */,
 				EA9049E624EBC84F009437B8 /* ViewModel.swift in Sources */,
 				EA9049ED24EBD08D009437B8 /* CustomNavController.swift in Sources */,

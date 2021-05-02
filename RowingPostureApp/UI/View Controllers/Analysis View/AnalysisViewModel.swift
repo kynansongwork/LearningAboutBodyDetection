@@ -9,3 +9,7 @@
 import Foundation
 
 class AnalysisViewModel: BaseViewModel {}
+
+// CoreData to save session info:
+//- sessionInfo to include - Rate, Distance, Watts
+//- Add tab for posture and postion information when displaying info.

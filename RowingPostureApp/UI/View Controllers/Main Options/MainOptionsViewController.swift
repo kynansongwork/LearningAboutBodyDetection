@@ -38,4 +38,8 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
     @IBAction func settingsButtonTapped(_ sender: Any) {
         viewModel.coordinator?.transition(to: AppTransitions.SettingsView, object: nil)
     }
+    
+    @IBAction func analyseRowTapped(_ sender: Any) {
+        viewModel.coordinator?.transition(to: AppTransitions.AnalysisView, object: nil)
+    }
 }

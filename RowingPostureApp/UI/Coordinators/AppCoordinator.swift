@@ -38,7 +38,7 @@ class AppCoordinator: BaseCoordinator {
            if let page = page as? AppTransitions {
                switch page {
                case .AnalysisView:
-                   break
+                   presetAnalysisPage()
                case .CaptureView:
                    presetCapturePage()
                case .SettingsView:
@@ -69,6 +69,13 @@ extension AppCoordinator {
     func presetSettingsPage() {
         let controller = SettingsViewController.instatiateFromStoryboard(storyboard: .Main, with: SettingsViewModel(coordinator: self))
         let navController = CustomNavController(rootViewController: controller)
+        self.rootViewController.present(navController, animated: true, completion: nil)
+    }
+    
+    func presetAnalysisPage() {
+        let controller = AnalysisViewController.instatiateFromStoryboard(storyboard: .Main, with: AnalysisViewModel(coordinator: self))
+        let navController = CustomNavController(rootViewController: controller)
+        
         self.rootViewController.present(navController, animated: true, completion: nil)
     }
 }

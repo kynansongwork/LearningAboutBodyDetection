@@ -282,10 +282,10 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "dismissSettings()"
-            landmarkType = "7">
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "SettingsViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -394,8 +394,8 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,10 +410,10 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "sliderValueChanged(sender:)"
-            landmarkType = "7">
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "SettingsViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -426,10 +426,10 @@
             filePath = "RowingPostureApp/UI/View Controllers/Settings/SettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "sliderValueChanged(sender:)"
-            landmarkType = "7">
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "SettingsViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

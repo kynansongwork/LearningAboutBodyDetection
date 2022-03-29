@@ -1,0 +1,34 @@
+//
+//  UiControlSubscriptions.swift
+//  RowingPostureApp
+//
+//  Created by Kynan Song on 29/03/2022.
+//  Copyright © 2022 xDesign. All rights reserved.
+//
+
+import UIKit
+import Combine
+
+class UIControlSubscription<SubscriberType: Subscriber, Control: UIControl>: Subscription
+    where SubscriberType.Input == Control {
+    private var subscriber: SubscriberType?
+    private let control: Control
+
+    init(subscriber: SubscriberType, control: Control, event: UIControl.Event) {
+        self.subscriber = subscriber
+        self.control = control
+        control.addTarget(self, action: #selector(eventHandler), for: event)
+    }
+
+    func request(_ demand: Subscribers.Demand) {
+        // No-op
+    }
+
+    func cancel() {
+        subscriber = nil
+    }
+
+    @objc private func eventHandler() {
+        _ = subscriber?.receive(control)
+    }
+}

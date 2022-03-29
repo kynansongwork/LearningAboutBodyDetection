@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,9 +27,13 @@
 		2490FB45263EE3D20020DE2A /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2490FB44263EE3D20020DE2A /* AnalysisViewController.swift */; };
 		2490FB49263EE3DF0020DE2A /* AnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2490FB48263EE3DF0020DE2A /* AnalysisViewModel.swift */; };
 		2493D976263EDCAF0097E15A /* VideoCaptureViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493D975263EDCAF0097E15A /* VideoCaptureViewController+Extensions.swift */; };
+		249BD4DD27F31D1900D51846 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249BD4DC27F31D1900D51846 /* SettingsView.swift */; };
+		249BD4E027F31F5B00D51846 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 249BD4DF27F31F5B00D51846 /* TinyConstraints */; };
 		24B834DF24F1245900D8F3A2 /* MainOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */; };
 		24C2FA082556BDE000B00E99 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FA072556BDE000B00E99 /* MockCoordinator.swift */; };
 		24C2FA0E2556BE1900B00E99 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FA0D2556BE1900B00E99 /* MockViewController.swift */; };
+		24E9A91E27F323CC00147348 /* CombineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9A91D27F323CC00147348 /* CombineExtensions.swift */; };
+		24E9A92027F323F200147348 /* UiControlSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9A91F27F323F200147348 /* UiControlSubscriptions.swift */; };
 		24F71C7924FD7440007D3733 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7824FD7440007D3733 /* SettingsViewModel.swift */; };
 		24F71C7B24FD7551007D3733 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7A24FD7551007D3733 /* Settings.swift */; };
 		24F71CCA24FE3596007D3733 /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71CC924FE3596007D3733 /* BaseCoordinatorTests.swift */; };
@@ -89,9 +93,12 @@
 		2490FB44263EE3D20020DE2A /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		2490FB48263EE3DF0020DE2A /* AnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewModel.swift; sourceTree = "<group>"; };
 		2493D975263EDCAF0097E15A /* VideoCaptureViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoCaptureViewController+Extensions.swift"; sourceTree = "<group>"; };
+		249BD4DC27F31D1900D51846 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		24B834DE24F1245900D8F3A2 /* MainOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOptionsViewController.swift; sourceTree = "<group>"; };
 		24C2FA072556BDE000B00E99 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		24C2FA0D2556BE1900B00E99 /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
+		24E9A91D27F323CC00147348 /* CombineExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineExtensions.swift; sourceTree = "<group>"; };
+		24E9A91F27F323F200147348 /* UiControlSubscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiControlSubscriptions.swift; sourceTree = "<group>"; };
 		24F71C7824FD7440007D3733 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		24F71C7A24FD7551007D3733 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		24F71CBF24FE3570007D3733 /* RowingPostureAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RowingPostureAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249BD4E027F31F5B00D51846 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +174,7 @@
 				24873CE224FCF8E8008E0D7A /* Extensions */,
 				24656D8924F57A8000F9D288 /* AppUtility.swift */,
 				24656D9224F7CE8600F9D288 /* VideoCaptureUtility.swift */,
+				24E9A91F27F323F200147348 /* UiControlSubscriptions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 				244D392D2510AD5800F1D671 /* Settings Cells */,
 				24873CE024FCF2B5008E0D7A /* SettingsViewController.swift */,
 				24F71C7824FD7440007D3733 /* SettingsViewModel.swift */,
+				249BD4DC27F31D1900D51846 /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -229,6 +239,7 @@
 			children = (
 				24873CE324FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift */,
 				24873CE524FD2619008E0D7A /* AVCaptureVideoOrientation.swift */,
+				24E9A91D27F323CC00147348 /* CombineExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -453,6 +464,9 @@
 			dependencies = (
 			);
 			name = RowingPostureApp;
+			packageProductDependencies = (
+				249BD4DF27F31F5B00D51846 /* TinyConstraints */,
+			);
 			productName = RowingPostureApp;
 			productReference = EA9049B224E136A7009437B8 /* RowingPostureApp.app */;
 			productType = "com.apple.product-type.application";
@@ -485,6 +499,9 @@
 				Base,
 			);
 			mainGroup = EA9049A924E136A7009437B8;
+			packageReferences = (
+				249BD4DE27F31F5B00D51846 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = EA9049B324E136A7009437B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -553,10 +570,13 @@
 				EA9049FA24EFC0BE009437B8 /* CGPointExtensions.swift in Sources */,
 				24656DA024F90D8700F9D288 /* MainOptionsViewModel.swift in Sources */,
 				24F71CCF25051F11007D3733 /* PoseImageView.swift in Sources */,
+				249BD4DD27F31D1900D51846 /* SettingsView.swift in Sources */,
 				EA9049B624E136A7009437B8 /* AppDelegate.swift in Sources */,
 				24873CE424FCF9BA008E0D7A /* VideoCaptureUtilityExtension.swift in Sources */,
 				2490FB49263EE3DF0020DE2A /* AnalysisViewModel.swift in Sources */,
 				2493D976263EDCAF0097E15A /* VideoCaptureViewController+Extensions.swift in Sources */,
+				24E9A92027F323F200147348 /* UiControlSubscriptions.swift in Sources */,
+				24E9A91E27F323CC00147348 /* CombineExtensions.swift in Sources */,
 				24F71C7924FD7440007D3733 /* SettingsViewModel.swift in Sources */,
 				EA9049E624EBC84F009437B8 /* ViewModel.swift in Sources */,
 				EA9049ED24EBD08D009437B8 /* CustomNavController.swift in Sources */,
@@ -767,7 +787,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSM2D4RUSA;
+				DEVELOPMENT_TEAM = 632LZ235K6;
 				INFOPLIST_FILE = RowingPostureApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -786,7 +806,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSM2D4RUSA;
+				DEVELOPMENT_TEAM = 632LZ235K6;
 				INFOPLIST_FILE = RowingPostureApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -831,6 +851,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		249BD4DE27F31F5B00D51846 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		249BD4DF27F31F5B00D51846 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 249BD4DE27F31F5B00D51846 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA9049AA24E136A7009437B8 /* Project object */;
 }

@@ -65,7 +65,7 @@ class VideoCapture: NSObject {
         }
         
         captureSession.beginConfiguration()
-        captureSession.sessionPreset = .vga640x480
+        captureSession.sessionPreset = .hd1280x720
         
         try setCaptureSessionInput()
         try setCaptureSessionOutput()
@@ -127,16 +127,7 @@ class VideoCapture: NSObject {
         
         // The video orientation will be updated here.
         if let connection = videoOutput.connection(with: .video), connection.isVideoOrientationSupported {
-            connection.videoOrientation = AVCaptureVideoOrientation(deviceOrientation: UIDevice.current.orientation)
             connection.isVideoMirrored = cameraPosition == .front
-            
-            // The landscape orientaton if inverted to force the image into the upward orientation.
-            // Basically spin the orientation based on the phones position.
-            if connection.videoOrientation == .landscapeLeft {
-                connection.videoOrientation = .landscapeRight
-            } else if connection.videoOrientation == .landscapeRight {
-                connection.videoOrientation = .landscapeLeft
-            }
         }
     }
     

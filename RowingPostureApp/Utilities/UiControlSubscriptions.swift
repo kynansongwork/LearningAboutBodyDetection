@@ -1,13 +1,7 @@
-//
-//  UiControlSubscriptions.swift
-//  RowingPostureApp
-//
-//  Created by Kynan Song on 29/03/2022.
-//  Copyright © 2022 xDesign. All rights reserved.
-//
+// Copyright © 2022 xDesign. All rights reserved.
 
-import UIKit
 import Combine
+import UIKit
 
 class UIControlSubscription<SubscriberType: Subscriber, Control: UIControl>: Subscription
     where SubscriberType.Input == Control {

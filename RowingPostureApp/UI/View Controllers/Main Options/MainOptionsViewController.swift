@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 class MainOptionsViewController: UIViewController, StoryboardLoadedViewController {
     
     var viewModel: MainOptionsViewModel!
+    private var subscriptions = Set<AnyCancellable>()
     
     @IBOutlet weak var analyseButton: RoundButton!
     @IBOutlet weak var recordButton: RoundButton!
@@ -17,6 +19,7 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindView()
         AppUtility.lockOrientation(.landscapeRight)
     }
     
@@ -31,15 +34,20 @@ class MainOptionsViewController: UIViewController, StoryboardLoadedViewControlle
         AppUtility.lockOrientation(.all)
     }
 
-    @IBAction func recordButtonTapped(_ sender: Any) {
-        viewModel.coordinator?.transition(to: AppTransitions.CaptureView, object: nil)
-    }
-    
-    @IBAction func settingsButtonTapped(_ sender: Any) {
-        viewModel.coordinator?.transition(to: AppTransitions.SettingsView, object: nil)
-    }
-    
-    @IBAction func analyseRowTapped(_ sender: Any) {
-        viewModel.coordinator?.transition(to: AppTransitions.AnalysisView, object: nil)
+    func bindView() {
+        analyseButton.publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                self?.viewModel.coordinator?.transition(to: AppTransitions.AnalysisView, object: nil)
+            }.store(in: &subscriptions)
+
+        recordButton.publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                self?.viewModel.coordinator?.transition(to: AppTransitions.CaptureView, object: nil)
+            }.store(in: &subscriptions)
+
+        settingsButton.publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                self?.viewModel.coordinator?.transition(to: AppTransitions.SettingsView, object: nil)
+            }.store(in: &subscriptions)
     }
 }

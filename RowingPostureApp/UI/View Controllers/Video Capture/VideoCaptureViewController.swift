@@ -72,17 +72,16 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
             self.videoCapture.startCaptureSession()
         }
     }
-    
-    @IBAction func recordButtonTapped(_ sender: Any) {
-        
-        //When tapped, the record button will screen record.
-        print("Record Tapped.")
-    }
 
     func bindView() {
         closeButton.publisher(for: .touchUpInside)
             .sink { [weak self] _ in
                 self?.viewModel.coordinator?.dismiss()
+            }.store(in: &subscriptions)
+
+        recordButton.publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                print("Record Tapped.")
             }.store(in: &subscriptions)
     }
     

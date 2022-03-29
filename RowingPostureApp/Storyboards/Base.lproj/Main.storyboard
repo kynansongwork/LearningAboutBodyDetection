@@ -41,9 +41,6 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="analyseRowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dQ-Fi-6qU"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gO-Dr-nbP" customClass="RoundButton" customModule="RowingPostureApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
@@ -66,9 +63,6 @@
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="recordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eBP-R3-J8Z"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,9 +84,6 @@
                                     <constraint firstAttribute="height" constant="30" id="zFf-ph-lse"/>
                                 </constraints>
                                 <state key="normal" title="Settings" image="settings"/>
-                                <connections>
-                                    <action selector="settingsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Jo-WE-1hn"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -142,9 +133,6 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="recordButtonTapped:" destination="ALd-Hh-zTC" eventType="touchUpInside" id="AK7-XX-tbk"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeU-Df-2gv">
                                         <rect key="frame" x="841" y="301" width="35" height="21"/>

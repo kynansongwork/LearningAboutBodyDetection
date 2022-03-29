@@ -7,32 +7,51 @@
 //
 
 import UIKit
+import Combine
 
 class AnalysisViewController: UIViewController, StoryboardLoadedViewController {
     var viewModel: AnalysisViewModel!
+    private var contentView: AnalysisView!
+
+    private var subscriptions = Set<AnyCancellable>()
+
+    let closeButton: UIButton = {
+        let temp = UIButton()
+        let closeImage = UIImage(named: "icClose")
+        let whiteImage = closeImage?.withRenderingMode(.alwaysTemplate)
+        temp.frame = CGRect(x: 0, y: 0, width: 51, height: 31)
+        temp.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        temp.setImage(whiteImage, for: .normal)
+        temp.tintColor = .blue
+        temp.accessibilityIdentifier = "icClose"
+        temp.isAccessibilityElement = true
+        return temp
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setUpNavBar() 
+        self.contentView = AnalysisView()
+        //view = contentView
+        setUpNavBar()
+        bindView()
     }
     
     func setUpNavBar() {
-        let closeButton = UIButton()
-        let closeImage = UIImage(named: "icClose")
-        let whiteImage = closeImage?.withRenderingMode(.alwaysTemplate)
-        closeButton.frame = CGRect(x: 0, y: 0, width: 51, height: 31)
-        closeButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
-        closeButton.setImage(whiteImage, for: .normal)
-        closeButton.tintColor = .blue
-        closeButton.addTarget(self, action: #selector(dismissAnalysisView), for: .touchUpInside)
-        closeButton.accessibilityIdentifier = "icClose"
-        closeButton.isAccessibilityElement = true
-        
         let closeModalButton = UIBarButtonItem()
         closeModalButton.customView = closeButton
         closeModalButton.customView?.tintColor = .blue
         self.navigationItem.leftBarButtonItem = closeModalButton
+    }
+
+    func bindView() {
+        closeButton.publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                self?.dismissSettings()
+            }.store(in: &subscriptions)
+    }
+
+    func dismissSettings() {
+        viewModel.coordinator?.dismiss()
     }
     
     @objc func dismissAnalysisView() {

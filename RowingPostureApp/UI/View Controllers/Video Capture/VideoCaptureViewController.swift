@@ -12,6 +12,8 @@ import Combine
 class VideoCaptureViewController: UIViewController, StoryboardLoadedViewController {
     
     var viewModel: VideoCaptureViewModel!
+
+    private var subscriptions = Set<AnyCancellable>()
     
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var recordButton: RoundButton!
@@ -38,6 +40,7 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
         setUpCamera()
         self.videoCapture.startCaptureSession()
         updateRate()
+        bindView()
         
         UIApplication.shared.isIdleTimerDisabled = true
         
@@ -75,10 +78,12 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
         //When tapped, the record button will screen record.
         print("Record Tapped.")
     }
-    
-    
-    @IBAction func closeButtonTapped(_ sender: Any) {
-        viewModel.coordinator?.dismiss()
+
+    func bindView() {
+        closeButton.publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                self?.viewModel.coordinator?.dismiss()
+            }.store(in: &subscriptions)
     }
     
     func setUpCloseButton() {

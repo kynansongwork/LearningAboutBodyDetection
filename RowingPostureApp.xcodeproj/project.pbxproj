@@ -34,6 +34,7 @@
 		24C2FA0E2556BE1900B00E99 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FA0D2556BE1900B00E99 /* MockViewController.swift */; };
 		24E9A91E27F323CC00147348 /* CombineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9A91D27F323CC00147348 /* CombineExtensions.swift */; };
 		24E9A92027F323F200147348 /* UiControlSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9A91F27F323F200147348 /* UiControlSubscriptions.swift */; };
+		24E9A92227F346A300147348 /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E9A92127F346A300147348 /* AnalysisView.swift */; };
 		24F71C7924FD7440007D3733 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7824FD7440007D3733 /* SettingsViewModel.swift */; };
 		24F71C7B24FD7551007D3733 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71C7A24FD7551007D3733 /* Settings.swift */; };
 		24F71CCA24FE3596007D3733 /* BaseCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F71CC924FE3596007D3733 /* BaseCoordinatorTests.swift */; };
@@ -99,6 +100,7 @@
 		24C2FA0D2556BE1900B00E99 /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
 		24E9A91D27F323CC00147348 /* CombineExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineExtensions.swift; sourceTree = "<group>"; };
 		24E9A91F27F323F200147348 /* UiControlSubscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiControlSubscriptions.swift; sourceTree = "<group>"; };
+		24E9A92127F346A300147348 /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
 		24F71C7824FD7440007D3733 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		24F71C7A24FD7551007D3733 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		24F71CBF24FE3570007D3733 /* RowingPostureAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RowingPostureAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +251,7 @@
 			children = (
 				2490FB44263EE3D20020DE2A /* AnalysisViewController.swift */,
 				2490FB48263EE3DF0020DE2A /* AnalysisViewModel.swift */,
+				24E9A92127F346A300147348 /* AnalysisView.swift */,
 			);
 			path = "Analysis View";
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				EA9049F124EFB32D009437B8 /* StoryboardLoadedViewController.swift in Sources */,
 				EA9049F824EFC065009437B8 /* MLMultiArrayExtensions.swift in Sources */,
 				24F71C7B24FD7551007D3733 /* Settings.swift in Sources */,
+				24E9A92227F346A300147348 /* AnalysisView.swift in Sources */,
 				24656D9124F6BAFA00F9D288 /* PoseBuilderExtensionsMultiple.swift in Sources */,
 				24873CE124FCF2B5008E0D7A /* SettingsViewController.swift in Sources */,
 				EA9049F624EFC047009437B8 /* CGImageExtensions.swift in Sources */,

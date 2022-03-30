@@ -14,7 +14,7 @@ class SettingsViewController: UIViewController, StoryboardLoadedViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.contentView = SettingsView()
+        contentView = SettingsView()
         view = contentView
         setUpNavBar()
         setUpView()
@@ -65,7 +65,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             "settingsCell", for: indexPath) as! SettingsCell
 
         settingCell.confidenceValueSlider.tag = indexPath.row
-        settingCell.confidenceValueSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+
+        settingCell.confidenceValueSlider.publisher(for: .valueChanged)
+            .sink { [weak self] slider in
+                guard let currentValue = slider.value(forKey: "value") as? Int else { return }
+                let row = slider.tag
+                print("Slider at \(row) value is: \(currentValue)")
+                self?.viewModel.configureConfidenceLevels(sliderRow: row, sliderValue: currentValue)
+            }.store(in: &subscriptions)
 
         if indexPath.row != 5 {
             settingCell.settingLabel.text = viewModel.cells[indexPath.row]
@@ -88,13 +95,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             baseCell.textLabel?.text = viewModel.cells[5]
             return baseCell
         }
-    }
-
-    @objc func sliderValueChanged(sender: UISlider) {
-        let currentValue = Int(sender.value)
-        let row = sender.tag
-        // print("\(viewModel.cells[row]) has a confidence level of \(currentValue).")
-        viewModel.configureConfidenceLevels(sliderRow: row, sliderValue: currentValue)
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

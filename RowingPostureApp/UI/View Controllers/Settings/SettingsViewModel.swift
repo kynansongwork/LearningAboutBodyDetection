@@ -1,43 +1,36 @@
-//
-//  SettingsViewModel.swift
-//  RowingPostureApp
-//
-//  Created by Kynan Song on 31/08/2020.
-//
+// Copyright © 2022 xDesign. All rights reserved.
 
 import Foundation
 
 class SettingsViewModel: BaseViewModel {
-    
     var blueToothHelper: BluetoothInterface
     var poseBuilderConfiguration = PoseBuilderConfiguration()
     let confidenceConfigurations = UserDefaults.standard
-    
+
     var configuration: PoseBuilderConfiguration! {
         didSet {
             poseBuilderConfiguration = configuration
         }
     }
-    
+
     let cells: [String] = [SettingsHeaders().jointConfidence,
                            SettingsHeaders().poseConfidence,
                            SettingsHeaders().localSearchRadius,
                            SettingsHeaders().matchingMinimumDistance,
                            SettingsHeaders().adjacentRefinementSteps,
                            SettingsHeaders().blueTooth]
-    
+
     override init(coordinator: BaseCoordinator) {
         self.blueToothHelper = BluetoothHelper.shared
         self.configuration = poseBuilderConfiguration
         super.init(coordinator: coordinator)
     }
-    
+
     func scanForDevices() {
         blueToothHelper.scanForDevices()
     }
-    
+
     func configureConfidenceLevels(sliderRow: Int, sliderValue: Int) {
-        
         switch sliderRow {
         case 0:
             configuration.jointConfidenceThreshold = Double(sliderValue)
@@ -53,19 +46,26 @@ class SettingsViewModel: BaseViewModel {
             print("Unable to find configuration")
         }
     }
-    
+
     func saveSettings() {
-        let settingsStruct = Settings(jointConfidence: configuration.jointConfidenceThreshold, poseConfidence: configuration.poseConfidenceThreshold, localSearchRadius: Double(configuration.localSearchRadius), matchingMinimumDistance: configuration.matchingJointDistance, adjacentRefinementSteps: Double(configuration.adjacentJointOffsetRefinementSteps))
-        
+        // TODO: Save these in core data
+        let settingsStruct = Settings(
+            jointConfidence: configuration.jointConfidenceThreshold,
+            poseConfidence: configuration.poseConfidenceThreshold,
+            localSearchRadius: Double(configuration.localSearchRadius),
+            matchingMinimumDistance: configuration.matchingJointDistance,
+            adjacentRefinementSteps: Double(configuration.adjacentJointOffsetRefinementSteps)
+        )
+
         let encoder = JSONEncoder()
         if let encodedSettings = try? encoder.encode(settingsStruct) {
             confidenceConfigurations.set(encodedSettings, forKey: "currentSettings")
         }
     }
-    
+
     func loadSettings() {
         guard let savedSettings = confidenceConfigurations.object(forKey: "currentSettings") as? Data else { return }
-        
+
         let decoder = JSONDecoder()
         if let loadedSettings = try? decoder.decode(Settings.self, from: savedSettings) {
             configureConfidenceLevels(sliderRow: 0, sliderValue: Int(loadedSettings.jointConfidence))

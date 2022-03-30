@@ -15,7 +15,7 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
 
     private var subscriptions = Set<AnyCancellable>()
     
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var closeButton: CloseButton!
     @IBOutlet weak var recordButton: RoundButton!
     @IBOutlet weak var rateLabel: UILabel!
 
@@ -36,7 +36,6 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpCloseButton()
         setUpCamera()
         self.videoCapture.startCaptureSession()
         updateRate()
@@ -83,15 +82,6 @@ class VideoCaptureViewController: UIViewController, StoryboardLoadedViewControll
             .sink { [weak self] _ in
                 print("Record Tapped.")
             }.store(in: &subscriptions)
-    }
-    
-    func setUpCloseButton() {
-        let buttonImage = UIImage(named: "icClose")
-        let whiteImage = buttonImage?.withRenderingMode(.alwaysTemplate)
-        closeButton.setImage(whiteImage, for: .normal)
-        closeButton.tintColor = .white
-        closeButton.accessibilityIdentifier = "icClose"
-        closeButton.isAccessibilityElement = true
     }
     
     func updateRate() {
